@@ -1,8 +1,18 @@
 # Canal sem rosto com radar
 
+[![Seu canal sem rosto](guia/assets/banner.jpg)](https://inematds.github.io/canal-sem-rosto/guia/)
+
+**🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
+
 > Você pode ter um canal sem mostrar o rosto. O que faz ele crescer é o assunto certo, não a câmera.
 
-Um kit gratuito para brasileiros iniciantes que querem criar um canal sobre IA sem aparecer. O radar mostra assuntos que foram além do normal em canais pequenos e médios. Você escolhe um deles, faz seu próprio teste e explica o que aprendeu.
+## O que é
+
+Muita gente quer ter um canal sobre IA, mas não quer aparecer. No nosso radar do YouTube, o que mais puxou as views foi o assunto, não quem aparece. O **canal sem rosto com radar** é um método em 5 etapas e um kit grátis: ele lê o radar do que está bombando, separa os assuntos em que canais pequenos e médios furaram a bolha e sugere pautas com os números e um formato sem rosto para cada uma. Você precisa de um computador com Python e do radar [youtube-bombando](https://inematds.github.io/youtube-bombando/guia/) (também grátis). Não há promessa de dinheiro nem de views: o radar mostra uma chance.
+
+## 📖 Guia de uso
+
+Guia completo (landing + passo a passo): **https://inematds.github.io/canal-sem-rosto/guia/**
 
 **Sem promessa de dinheiro ou views.** O radar aponta uma chance. Não prova que o assunto causou o resultado, nem garante que ele se repita.
 
