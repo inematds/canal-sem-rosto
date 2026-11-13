@@ -46,7 +46,7 @@ python3 pautas.py
 python3 pautas.py /caminho/dados.json --saida saida --n 10 --piso-views 1000 --fator 3 --amostra 5
 ```
 
-O caminho padrão é `~/projetos/youtube-bombando/painel/dados.json`. Se ele não existir, o comando orienta como proceder e termina com código 2. Gere ou baixe os dados pelo [guia do radar](https://inematds.github.io/youtube-bombando/guia/). Mantenha dados reais fora do repositório.
+O radar grava o arquivo em `painel/dados.json`, dentro da pasta dele. Sem caminho, o kit procura na pasta ao lado (`../youtube-bombando/painel/dados.json`), em `~/projetos/youtube-bombando/painel/dados.json` e em `~/youtube-bombando/painel/dados.json`. Se não achar, diz onde procurou e termina com código 2. Gere ou baixe os dados pelo [guia do radar](https://inematds.github.io/youtube-bombando/guia/). Mantenha dados reais fora do repositório.
 
 ## Como o filtro funciona
 

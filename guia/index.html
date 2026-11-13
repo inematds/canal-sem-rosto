@@ -134,6 +134,7 @@
   .bl i{display:block;height:14px;border-radius:7px;background:linear-gradient(90deg,var(--c-now) var(--w),var(--line) var(--w))}
   @media(max-width:540px){.bl{grid-template-columns:110px minmax(0,1fr) 54px;font-size:.84rem}}
   table.n td{vertical-align:top}
+  @media(min-width:760px){.rolar{display:none}}
 </style>
 </head>
 <body>
@@ -163,7 +164,7 @@
 <div>
 <span class="chip">canal-sem-rosto · kit grátis · roda no seu computador</span>
 <h1>Seu canal pode crescer <span class="amb">sem mostrar o rosto</span></h1>
-<p class="lead">O que faz um canal crescer é o assunto certo, não a câmera. O <strong>canal sem rosto com radar</strong> escolhe a pauta pelo que o radar mostrou: assuntos em que canais pequenos fizeram muitas vezes o normal deles.</p>
+<p class="lead">O que faz um canal crescer é o assunto certo, não a câmera. O <strong>canal sem rosto com radar</strong> escolhe a pauta pelo que o radar mostrou (o radar é um painel grátis que, toda manhã, mostra os vídeos que passaram muito das views normais do próprio canal): assuntos em que canais pequenos fizeram muitas vezes o normal deles.</p>
 <div class="cta">
 <a class="btn" href="#radar">Entender em 5 minutos</a>
 <a class="btn ghost" href="https://github.com/inematds/canal-sem-rosto" rel="noopener" target="_blank">Ver no GitHub</a>
@@ -186,7 +187,7 @@
 <section id="radar"><div class="wrap">
 <span class="chip">O que o radar mostrou</span>
 <h2>O assunto puxou mais que <span class="amb">a cara</span></h2>
-<p class="sub">Rodada de 12/11/2026 do nosso radar: 320 vídeos da semana em 7 assuntos de IA. Para cada vídeo, o radar compara as views com o normal do próprio canal (a mediana dos últimos vídeos dele). Fez <b>3 vezes ou mais</b> o normal? Então o assunto furou a bolha do canal.</p>
+<p class="sub">Rodada de 12/11/2026 do nosso radar: 320 vídeos da semana em 7 assuntos de IA. Para cada vídeo, o radar compara as views com o normal do próprio canal (a mediana dos últimos vídeos dele). Fez <b>3 vezes ou mais</b> o normal? Então o assunto furou a bolha do canal. Canal <b>pequeno</b> = menos de 10 mil inscritos; <b>médio</b> = de 10 mil a 500 mil; acima disso, grande.</p>
 <div class="grid g3">
 <div class="card"><span class="nota-big">63%</span><h3>das views em "ganhar dinheiro com IA"</h3><p>vieram de vídeos que fizeram 3× ou mais o normal do canal. O público foi atrás do assunto.</p></div>
 <div class="card"><span class="nota-big">50</span><h3>vídeos de canais pequenos e médios</h3><p>furaram a bolha pelo conteúdo nesta rodada (contra 5 de canais grandes).</p></div>
@@ -203,19 +204,21 @@
 <div class="bl"><span>agentes de IA</span><i style="--w:14.7%"></i><b>14,7%</b></div>
 <div class="bl"><span>n8n automação</span><i style="--w:0.6%"></i><b>0%</b></div>
 </div>
-<h3 style="margin:34px 0 6px;font-family:Sora">Duração: vídeo longo foi mais longe</h3>
-<p class="mut" style="margin:0 0 12px;font-size:.92rem">Média de quantas vezes o normal do próprio canal, por duração do vídeo (mesma rodada).</p>
-<div class="barras" role="img" aria-label="Mais de 60 minutos 4,2 vezes; 8 a 20 minutos 1,8 vez; 20 a 60 minutos 1,0 vez">
-<div class="bl"><span>mais de 60 min</span><i style="--w:100%"></i><b>4,2×</b></div>
-<div class="bl"><span>8 a 20 min</span><i style="--w:42.9%"></i><b>1,8×</b></div>
-<div class="bl"><span>20 a 60 min</span><i style="--w:23.8%"></i><b>1,0×</b></div>
+<h3 style="margin:34px 0 6px;font-family:Sora">Duração: o curto e o muito longo foram mais longe</h3>
+<p class="mut" style="margin:0 0 12px;font-size:.92rem">Quantas vezes o normal do próprio canal, por duração do vídeo: o valor do meio de cada faixa (mediana), mesma rodada. Entre parênteses, quantos vídeos.</p>
+<div class="barras" role="img" aria-label="Menos de 8 minutos 5,7 vezes; mais de 60 minutos 4,2 vezes; 8 a 20 minutos 1,8 vez; 20 a 60 minutos 1,0 vez">
+<div class="bl"><span>até 8 min (20)</span><i style="--w:100%"></i><b>5,7×</b></div>
+<div class="bl"><span>mais de 60 min (33)</span><i style="--w:73.7%"></i><b>4,2×</b></div>
+<div class="bl"><span>8 a 20 min (48)</span><i style="--w:31.6%"></i><b>1,8×</b></div>
+<div class="bl"><span>20 a 60 min (31)</span><i style="--w:17.5%"></i><b>1,0×</b></div>
 </div>
 <div class="radar"><b>Como ler:</b> isto é um retrato de uma semana, não uma lei. O radar mostra um sinal (o assunto puxou), não prova a causa. Por isso o método termina medindo de novo o seu próprio vídeo no radar.</div>
 </div></section>
 <section id="pautas"><div class="wrap">
 <span class="chip">Pautas</span>
 <h2>As pautas que o kit tirou <span class="amb">desta rodada</span></h2>
-<p class="sub">Saída real do kit sobre o radar de 12/11/2026. Só entra assunto em que <b>pelo menos 2 canais pequenos ou médios diferentes</b> fizeram 3× ou mais o normal deles, com 1.000 views ou mais. Nenhum nome de canal ou de vídeo sai na saída: só o assunto e os números.</p>
+<p class="sub">Saída real do kit sobre o radar de 12/11/2026. Só entra assunto em que <b>pelo menos 2 canais pequenos ou médios diferentes</b> fizeram 3× ou mais o normal deles, com 1.000 views ou mais. Nenhum nome de canal ou de vídeo sai na saída: só o assunto e os números (aqui com os rótulos dos temas simplificados).</p>
+<p class="mut rolar" style="font-size:.85rem;margin:0 0 6px">← arraste a tabela para o lado para ver o formato sem rosto →</p>
 <div style="overflow-x:auto">
 <table class="n" style="min-width:680px">
 <tr><th>#</th><th>Assunto</th><th>Canais</th><th>Quantas vezes o normal (mediana)</th><th>Duração mais comum</th><th>Formato sem rosto</th></tr>
@@ -250,7 +253,7 @@
 <p class="sub">Conferido em 13/11/2026 nas páginas oficiais de ajuda do YouTube. Isto muda: confira sempre na fonte antes de decidir.</p>
 <div class="grid g3">
 <div class="card"><h3>Para entrar no programa de parcerias, hoje</h3><p>1.000 inscritos e 4.000 horas de exibição públicas nos últimos 12 meses, ou 1.000 inscritos e 10 milhões de views de Shorts em 90 dias. <a href="https://support.google.com/youtube/answer/72851" rel="noopener" target="_blank">Fonte</a></p></div>
-<div class="card"><h3>A partir de 1º/02/2027, para canais novos</h3><p>1.000 inscritos e 8.000 horas em 365 dias, ou 20 milhões de views de Shorts em 90 dias. Quem já está no programa não muda. Recursos de fã continuam com 500 inscritos. <a href="https://support.google.com/youtube/answer/12843009" rel="noopener" target="_blank">Fonte</a></p></div>
+<div class="card"><h3>A partir de 1º/02/2027, para canais novos</h3><p>1.000 inscritos e 8.000 horas em 365 dias, ou 20 milhões de views de Shorts em 90 dias. Quem já está no programa não muda. Recursos de fã continuam com 500 inscritos e 3.000 horas no último ano, ou 3 milhões de views de Shorts em 90 dias. <a href="https://support.google.com/youtube/answer/12843009" rel="noopener" target="_blank">Fonte</a></p></div>
 <div class="card"><h3>O que não monetiza</h3><p>Conteúdo de molde e repetitivo: slideshow de imagens ou texto rolando sem narração, conteúdo de IA genérico produzido em massa sem a visão do criador, leitura de texto de site ou notícia que você não criou. <a href="https://support.google.com/youtube/answer/1311392" rel="noopener" target="_blank">Fonte</a></p></div>
 </div>
 <div class="radar"><b>Por isso o kit nunca sugere</b> slideshow, texto rolando, leitura de notícia ou série de vídeos de IA no mesmo molde. Todo formato sugerido tem a sua voz, o seu teste ou a sua explicação.</div>
@@ -275,7 +278,7 @@
 <span class="chip">O que é</span>
 <h2>Dois scripts <span class="amb">e um método</span></h2>
 <div class="grid g3">
-<div class="card"><h3>pautas.py</h3><p>Lê o arquivo do radar (<code>dados.json</code>) e grava <code>saida/pautas.md</code> e <code>saida/pautas.json</code>: até 10 pautas, sinais fracos e o que fica fora do método.</p></div>
+<div class="card"><h3>pautas.py</h3><p>Lê o arquivo do radar (<code>dados.json</code>) e grava <code>saida/pautas.md</code> e <code>saida/pautas.json</code>: até 10 pautas, os sinais fracos (assunto que furou a bolha em um canal só) e o que fica fora do método.</p></div>
 <div class="card"><h3>checa_sem_fonte.py</h3><p>Procura nome de canal, título ou id de vídeo de terceiro no seu roteiro ou na sua saída antes de publicar.</p></div>
 <div class="card"><h3>metodo/</h3><p>As 5 etapas, uma por arquivo, e as regras do YouTube conferidas na fonte, com data.</p></div>
 </div>
@@ -297,8 +300,8 @@
 <span class="chip">Pré-requisitos</span>
 <h2>O que você precisa</h2>
 <div class="grid g3">
-<div class="card"><h3>Python 3.10 ou mais novo</h3><p>Só a biblioteca padrão, nada para instalar com pip. Confira:</p><pre><span class="k">python3 --version</span></pre></div>
-<div class="card"><h3>git</h3><p>Para baixar o kit:</p><pre><span class="k">git clone https://github.com/inematds/canal-sem-rosto</span>
+<div class="card"><h3>Python 3.10 ou mais novo</h3><p>Só a biblioteca padrão, nada para instalar com pip. Testado no Linux; no Windows o comando costuma ser <code>python</code> ou <code>py</code> no lugar de <code>python3</code>. Confira:</p><pre><span class="k">python3 --version</span></pre></div>
+<div class="card"><h3>git (ou o ZIP)</h3><p>Para baixar o kit. Sem git, use "Code → Download ZIP" na <a href="https://github.com/inematds/canal-sem-rosto" rel="noopener" target="_blank">página do GitHub</a> e descompacte ao lado da pasta do radar.</p><pre><span class="k">git clone https://github.com/inematds/canal-sem-rosto</span>
 <span class="k">cd canal-sem-rosto</span></pre></div>
 <div class="card"><h3>O radar youtube-bombando</h3><p>É ele que gera o <code>dados.json</code>. Instale pelo <a href="https://inematds.github.io/youtube-bombando/guia/" rel="noopener" target="_blank">guia dele</a> e troque os assuntos para o seu nicho.</p></div>
 </div>
@@ -314,9 +317,9 @@
 </div></div>
 <div class="step"><div class="b">2</div><div>
 <h3>Rode no seu radar</h3>
-<p>Sem caminho, o kit procura o radar em <code>~/projetos/youtube-bombando/painel/dados.json</code>. Se ele estiver em outro lugar, passe o caminho:</p>
+<p>O radar grava o arquivo em <code>painel/dados.json</code>, dentro da pasta dele, depois da primeira coleta. Sem caminho, o kit procura o radar na pasta ao lado (<code>../youtube-bombando</code>), em <code>~/projetos/youtube-bombando</code> e em <code>~/youtube-bombando</code>. Se ele estiver em outro lugar, passe o caminho:</p>
 <pre><span class="k">python3 pautas.py</span>
-<span class="k">python3 pautas.py /caminho/para/dados.json</span></pre>
+<span class="k">python3 pautas.py ../youtube-bombando/painel/dados.json</span></pre>
 </div></div>
 <div class="step"><div class="b">3</div><div>
 <h3>Ajuste o filtro, se quiser</h3>
@@ -330,8 +333,8 @@
 </div></div>
 <div class="step"><div class="b">5</div><div>
 <h3>Confira o roteiro antes de publicar</h3>
-<p>Procura qualquer canal, título ou id do radar no seu texto:</p>
-<pre><span class="k">python3 checa_sem_fonte.py /caminho/para/dados.json roteiro.txt</span>
+<p>Salve o seu roteiro num arquivo de texto (ex.: <code>roteiro.txt</code>). O conferidor procura nele qualquer canal, título ou id do radar. Se achar, mostra o arquivo, a linha e o nome mascarado (ex.: <code>roteiro.txt:3:U***I</code>) e sai com código 1: tire o nome e rode de novo.</p>
+<pre><span class="k">python3 checa_sem_fonte.py ../youtube-bombando/painel/dados.json roteiro.txt</span>
 <span class="c"># "nenhuma fonte de terceiro encontrada" = pode seguir</span></pre>
 </div></div>
 <div class="step"><div class="b">6</div><div>

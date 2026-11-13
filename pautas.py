@@ -13,6 +13,14 @@ import unicodedata
 
 BASE = Path(__file__).resolve().parent
 PADRAO = Path('~/projetos/youtube-bombando/painel/dados.json').expanduser()
+# Onde o radar costuma estar: ao lado deste kit, na pasta de projetos ou na pasta pessoal.
+CANDIDATOS = [Path(__file__).resolve().parent.parent / 'youtube-bombando/painel/dados.json', PADRAO,
+              Path('~/youtube-bombando/painel/dados.json').expanduser()]
+
+
+def achar_radar():
+    """Primeiro dados.json do radar que existir; se nenhum existir, o caminho padrão (dá a mensagem de erro)."""
+    return next((c for c in CANDIDATOS if c.is_file()), PADRAO)
 CUIDADO = 'O YouTube não monetiza conteúdo repetitivo ou de molde sem contribuição original; mostre seu teste e sua análise.'
 ETAPAS = ['Escolher o assunto no radar', 'Escrever um roteiro com gancho', 'Produzir sem rosto com autoria', 'Publicar com promessa clara', 'Medir no radar após 7 dias']
 FAIXAS = ['curto (< 8 min)', 'médio (8–20 min)', 'longo (20–60 min)', 'maratona (> 60 min)', 'sem duração']
@@ -224,7 +232,7 @@ def inteiro(texto):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('caminho', nargs='?', default=str(PADRAO))
+    parser.add_argument('caminho', nargs='?', default=None)
     parser.add_argument('--saida', default='saida')
     parser.add_argument('--n', type=inteiro, default=10)
     parser.add_argument('--piso-views', type=inteiro, default=1000)
@@ -233,7 +241,7 @@ def main(argv=None):
     parser.add_argument('--detalhes', action='store_true')
     args = parser.parse_args(argv)
     try:
-        dados = carregar(args.caminho)
+        dados = carregar(args.caminho or achar_radar())
         resultado = montar_pautas(dados, args.n, args.piso_views, args.fator, args.amostra)
         pasta = Path(args.saida).expanduser()
         pasta.mkdir(parents=True, exist_ok=True)
@@ -256,7 +264,10 @@ def main(argv=None):
             print('Há detalhes privados: não publique este arquivo.')
         return 0
     except FileNotFoundError:
-        print('Dados ou dicionário não encontrados. Gere/baixe dados.json no kit youtube-bombando e informe o caminho. Para testar: python3 pautas.py exemplos/dados-sintetico.json', file=sys.stderr)
+        print('Dados ou dicionário não encontrados. O radar youtube-bombando grava o arquivo em <pasta do radar>/painel/dados.json '
+              '(depois da primeira coleta). Procurei em: ' + ', '.join(str(c) for c in CANDIDATOS) + '. '
+              'Passe o caminho, ex.: python3 pautas.py ../youtube-bombando/painel/dados.json. '
+              'Para testar sem o radar: python3 pautas.py exemplos/dados-sintetico.json', file=sys.stderr)
     except (OSError, ValueError, TypeError, AttributeError):
         print('Não foi possível ler os dados ou gravar os arquivos. Confira o JSON, o dicionário e as permissões.', file=sys.stderr)
     return 2
