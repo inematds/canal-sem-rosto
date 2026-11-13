@@ -187,7 +187,7 @@
 <p class="sub">Ronda del 12/11/2026 de nuestro radar: 320 videos recientes sobre 7 temas de IA. Para cada video, el radar compara las visualizaciones con lo normal del propio canal (la mediana de sus últimos videos). ¿Hizo <b>3 veces o más</b> lo habitual? Entonces el tema superó la burbuja del canal. Canal <b>pequeño</b> = menos de 10 mil suscriptores; <b>mediano</b> = de 10 mil a 500 mil; por encima de eso, grande.</p>
 <div class="grid g3">
 <div class="card"><span class="nota-big">63%</span><h3>de las visualizaciones en "ganar dinero con IA"</h3><p>vinieron de videos que hicieron 3× o más de lo normal del canal. El público buscó el tema.</p></div>
-<div class="card"><span class="nota-big">50</span><h3>videos de canales pequeños y medianos</h3><p>rompieron la burbuja con su contenido en esta ronda (frente a 5 de canales grandes).</p></div>
+<div class="card"><span class="nota-big">50</span><h3>videos de canales pequeños y medianos</h3><p>rompieron la burbuja con su contenido en esta ronda: el 48% de los 105 videos de esos canales en los que el radar pudo medir lo habitual, frente a 5 de 27 (19%) en los canales grandes.</p></div>
 <div class="card"><span class="nota-big">810×</span><h3>el rendimiento habitual del canal</h3><p>fue el mayor salto de la ronda, en un canal pequeño, sobre una función nueva de ChatGPT para empresas.</p></div>
 </div>
 <h3 style="margin:34px 0 6px;font-family:Sora">Cuántas visualizaciones vinieron del tema, por tema</h3>
@@ -330,7 +330,7 @@
 </div></div>
 <div class="step"><div class="b">5</div><div>
 <h3>Revisa el guion antes de publicar</h3>
-<p>Guarda tu guion en un archivo de texto (ej.: <code>roteiro.txt</code>). El verificador busca en él cualquier canal, título o id del radar. Si encuentra algo, muestra el archivo, la línea y el nombre oculto (ej.: <code>roteiro.txt:3:U***I</code>) y sale con código 1: quita el nombre y vuelve a ejecutarlo.</p>
+<p>Guarda tu guion en un archivo de texto (ej.: <code>roteiro.txt</code>). El verificador busca en él el nombre exacto de cada canal, el título completo de cada video y los ids del radar (un fragmento de título no se detecta: reléelo tú también). Si encuentra algo, muestra el archivo, la línea y el nombre oculto (ej.: <code>roteiro.txt:3:U***I</code>) y sale con código 1: quita el nombre y vuelve a ejecutarlo.</p>
 <pre><span class="k">python3 checa_sem_fonte.py ../youtube-bombando/painel/dados.json roteiro.txt</span>
 <span class="c"># "nenhuma fonte de terceiro encontrada" (ninguna fuente de terceros; el kit responde en portugués) = puedes continuar</span></pre>
 </div></div>

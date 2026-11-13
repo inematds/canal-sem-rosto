@@ -187,7 +187,7 @@
 <p class="sub">Our radar run on Nov 12, 2026: 320 recent videos across 7 AI topics. For each video, the radar compares its views with the channel’s usual performance (the median of its recent videos). Did it get <b>3 times or more</b> the usual number? Then the topic broke out beyond the channel's audience. Channel <b>small</b> = fewer than 10,000 subscribers; <b>medium</b> = 10,000 to 500,000; above that, large.</p>
 <div class="grid g3">
 <div class="card"><span class="nota-big">63%</span><h3>of the views in "making money with AI"</h3><p>came from videos that got 3× or more the channel’s usual views. The audience was interested in the topic.</p></div>
-<div class="card"><span class="nota-big">50</span><h3>videos from small and medium channels</h3><p>broke out of their bubble through their content this round (compared with 5 from large channels).</p></div>
+<div class="card"><span class="nota-big">50</span><h3>videos from small and medium channels</h3><p>broke out of their bubble through their content this round: 48% of the 105 videos from those channels where the radar could measure the usual level, compared with 5 of 27 (19%) from large channels.</p></div>
 <div class="card"><span class="nota-big">810×</span><h3>the channel's usual views</h3><p>was the biggest jump of the round, on a small channel, about a new ChatGPT feature for businesses.</p></div>
 </div>
 <h3 style="margin:34px 0 6px;font-family:Sora">How many views came from the topic, by theme</h3>
@@ -330,7 +330,7 @@
 </div></div>
 <div class="step"><div class="b">5</div><div>
 <h3>Review the script before publishing</h3>
-<p>Save your script in a text file (e.g., <code>roteiro.txt</code>). The checker searches it for any channel, title, or radar ID. If it finds one, it shows the file, line, and masked name (e.g., <code>roteiro.txt:3:U***I</code>) and exits with code 1: remove the name and run it again.</p>
+<p>Save your script in a text file (e.g., <code>roteiro.txt</code>). The checker searches it for the exact name of each channel, the full title of each video and the radar IDs (a piece of a title is not caught: reread it yourself too). If it finds one, it shows the file, line, and masked name (e.g., <code>roteiro.txt:3:U***I</code>) and exits with code 1: remove the name and run it again.</p>
 <pre><span class="k">python3 checa_sem_fonte.py ../youtube-bombando/painel/dados.json roteiro.txt</span>
 <span class="c"># "nenhuma fonte de terceiro encontrada" (no third-party source found; the kit prints in Portuguese) = you can proceed</span></pre>
 </div></div>

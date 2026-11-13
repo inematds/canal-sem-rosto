@@ -190,7 +190,7 @@
 <p class="sub">Rodada de 12/11/2026 do nosso radar: 320 vídeos recentes em 7 assuntos de IA. Para cada vídeo, o radar compara as views com o normal do próprio canal (a mediana dos últimos vídeos dele). Fez <b>3 vezes ou mais</b> o normal? Então o assunto furou a bolha do canal. Canal <b>pequeno</b> = menos de 10 mil inscritos; <b>médio</b> = de 10 mil a 500 mil; acima disso, grande.</p>
 <div class="grid g3">
 <div class="card"><span class="nota-big">63%</span><h3>das views em "ganhar dinheiro com IA"</h3><p>vieram de vídeos que fizeram 3× ou mais o normal do canal. O público foi atrás do assunto.</p></div>
-<div class="card"><span class="nota-big">50</span><h3>vídeos de canais pequenos e médios</h3><p>furaram a bolha pelo conteúdo nesta rodada (contra 5 de canais grandes).</p></div>
+<div class="card"><span class="nota-big">50</span><h3>vídeos de canais pequenos e médios</h3><p>furaram a bolha pelo conteúdo nesta rodada: 48% dos 105 vídeos desses canais em que o radar conseguiu medir o normal, contra 5 de 27 (19%) nos canais grandes.</p></div>
 <div class="card"><span class="nota-big">810×</span><h3>o normal do canal</h3><p>foi o maior salto da rodada, num canal pequeno, sobre um recurso novo do ChatGPT para negócios.</p></div>
 </div>
 <h3 style="margin:34px 0 6px;font-family:Sora">Quanto das views veio do assunto, por tema</h3>
@@ -333,7 +333,7 @@
 </div></div>
 <div class="step"><div class="b">5</div><div>
 <h3>Confira o roteiro antes de publicar</h3>
-<p>Salve o seu roteiro num arquivo de texto (ex.: <code>roteiro.txt</code>). O conferidor procura nele qualquer canal, título ou id do radar. Se achar, mostra o arquivo, a linha e o nome mascarado (ex.: <code>roteiro.txt:3:U***I</code>) e sai com código 1: tire o nome e rode de novo.</p>
+<p>Salve o seu roteiro num arquivo de texto (ex.: <code>roteiro.txt</code>). O conferidor procura nele o nome exato de cada canal, o título inteiro de cada vídeo e os ids do radar (pedaço de título não é achado: releia você também). Se achar, mostra o arquivo, a linha e o nome mascarado (ex.: <code>roteiro.txt:3:U***I</code>) e sai com código 1: tire o nome e rode de novo.</p>
 <pre><span class="k">python3 checa_sem_fonte.py ../youtube-bombando/painel/dados.json roteiro.txt</span>
 <span class="c"># "nenhuma fonte de terceiro encontrada" = pode seguir</span></pre>
 </div></div>
