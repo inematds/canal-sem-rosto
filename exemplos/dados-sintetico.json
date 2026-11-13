@@ -1,0 +1,603 @@
+{
+  "gerado_em": "2026-11-13T09:00:00-03:00",
+  "nichos": [
+    "agentes de ia",
+    "chatgpt"
+  ],
+  "videos": [
+    {
+      "id": "video_sintetico_000",
+      "titulo": "Tutorial X do zero — exercício 1",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 420,
+      "views": 2000,
+      "idade_h": 24,
+      "fator_canal": 3,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 1",
+      "descricao": "Descrição sintética reservada 1",
+      "nichos": [
+        "agentes de ia",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "video_sintetico_001",
+      "titulo": "Tutorial X do zero — exercício 2",
+      "canal": "Canal Fictício 2",
+      "channel_id": "canal_sintetico_2",
+      "duracao": 480,
+      "views": 2500,
+      "idade_h": 25,
+      "fator_canal": 4,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 2",
+      "descricao": "Descrição sintética reservada 2",
+      "nichos": [
+        "agentes de ia",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "video_sintetico_002",
+      "titulo": "Tutorial X do zero — exercício 3",
+      "canal": "Canal Fictício 3",
+      "channel_id": "canal_sintetico_3",
+      "duracao": 1200,
+      "views": 3000,
+      "idade_h": 26,
+      "fator_canal": 5,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo + quem fala",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 3",
+      "descricao": "Descrição sintética reservada 3",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_003",
+      "titulo": "Tutorial X do zero — exercício 4",
+      "canal": "Canal Fictício 4",
+      "channel_id": "canal_sintetico_4",
+      "duracao": 3600,
+      "views": 3500,
+      "idade_h": 27,
+      "fator_canal": 6,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 4",
+      "descricao": "Descrição sintética reservada 4",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_004",
+      "titulo": "Comparei ferramentas fictícias — exercício 5",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 3900,
+      "views": 4000,
+      "idade_h": 28,
+      "fator_canal": 7,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 5",
+      "descricao": "Descrição sintética reservada 5",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_005",
+      "titulo": "Comparei ferramentas fictícias — exercício 6",
+      "canal": "Canal Fictício 2",
+      "channel_id": "canal_sintetico_2",
+      "duracao": null,
+      "views": 4500,
+      "idade_h": 29,
+      "fator_canal": 8,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 6",
+      "descricao": "Descrição sintética reservada 6",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_006",
+      "titulo": "Comparei ferramentas fictícias — exercício 7",
+      "canal": "Canal Fictício 3",
+      "channel_id": "canal_sintetico_3",
+      "duracao": 420,
+      "views": 5000,
+      "idade_h": 30,
+      "fator_canal": 9,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 7",
+      "descricao": "Descrição sintética reservada 7",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_007",
+      "titulo": "Comparei ferramentas fictícias — exercício 8",
+      "canal": "Canal Fictício 4",
+      "channel_id": "canal_sintetico_4",
+      "duracao": 480,
+      "views": 5500,
+      "idade_h": 31,
+      "fator_canal": 3,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 8",
+      "descricao": "Descrição sintética reservada 8",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_008",
+      "titulo": "Design de painel imaginário — exercício 9",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 1200,
+      "views": 6000,
+      "idade_h": 32,
+      "fator_canal": 4,
+      "mediana_views": 500,
+      "porte": null,
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 9",
+      "descricao": "Descrição sintética reservada 9",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_009",
+      "titulo": "Design de painel imaginário — exercício 10",
+      "canal": "Canal Fictício 2",
+      "channel_id": "canal_sintetico_2",
+      "duracao": 3600,
+      "views": 6500,
+      "idade_h": 33,
+      "fator_canal": null,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 10",
+      "descricao": "Descrição sintética reservada 10",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_010",
+      "titulo": "Design de painel imaginário — exercício 11",
+      "canal": "Canal Fictício 3",
+      "channel_id": "canal_sintetico_3",
+      "duracao": 3900,
+      "views": 7000,
+      "idade_h": 34,
+      "fator_canal": 6,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Sem dados",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 11",
+      "descricao": "Descrição sintética reservada 11",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_011",
+      "titulo": "Design de painel imaginário — exercício 12",
+      "canal": "Canal Fictício 4",
+      "channel_id": "canal_sintetico_4",
+      "duracao": null,
+      "views": 7500,
+      "idade_h": 35,
+      "fator_canal": 7,
+      "mediana_views": 500,
+      "porte": "grande",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 12",
+      "descricao": "Descrição sintética reservada 12",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_012",
+      "titulo": "Automação de tarefa fictícia — exercício 13",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 420,
+      "views": 8000,
+      "idade_h": 36,
+      "fator_canal": 8,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 13",
+      "descricao": "Descrição sintética reservada 13",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_013",
+      "titulo": "Automação de tarefa fictícia — exercício 14",
+      "canal": "Canal Fictício 2",
+      "channel_id": "canal_sintetico_2",
+      "duracao": 480,
+      "views": 8500,
+      "idade_h": 37,
+      "fator_canal": 9,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 14",
+      "descricao": "Descrição sintética reservada 14",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_014",
+      "titulo": "Automação de tarefa fictícia — exercício 15",
+      "canal": "Canal Fictício 3",
+      "channel_id": "canal_sintetico_3",
+      "duracao": 1200,
+      "views": 9000,
+      "idade_h": 38,
+      "fator_canal": 3,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 15",
+      "descricao": "Descrição sintética reservada 15",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_015",
+      "titulo": "Automação de tarefa fictícia — exercício 16",
+      "canal": "Canal Fictício 4",
+      "channel_id": "canal_sintetico_4",
+      "duracao": 3600,
+      "views": 9500,
+      "idade_h": 39,
+      "fator_canal": 4,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 16",
+      "descricao": "Descrição sintética reservada 16",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_016",
+      "titulo": "Prompt de tarefa inventada — exercício 17",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 3900,
+      "views": 10000,
+      "idade_h": 40,
+      "fator_canal": 5,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 2,
+      "pessoa": "Pessoa Inventada 17",
+      "descricao": "Descrição sintética reservada 17",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_017",
+      "titulo": "Prompt de tarefa inventada — exercício 18",
+      "canal": "Canal Fictício 2",
+      "channel_id": "canal_sintetico_2",
+      "duracao": null,
+      "views": 90,
+      "idade_h": 41,
+      "fator_canal": 6,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 18",
+      "descricao": "Descrição sintética reservada 18",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_018",
+      "titulo": "Prompt de tarefa inventada — exercício 19",
+      "canal": "Canal Fictício 3",
+      "channel_id": "canal_sintetico_3",
+      "duracao": 420,
+      "views": 11000,
+      "idade_h": 42,
+      "fator_canal": 7,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 19",
+      "descricao": "Descrição sintética reservada 19",
+      "nichos": []
+    },
+    {
+      "id": "video_sintetico_019",
+      "titulo": "Prompt de tarefa inventada — exercício 20",
+      "canal": "Canal Fictício 4",
+      "channel_id": "canal_sintetico_4",
+      "duracao": 480,
+      "views": 11500,
+      "idade_h": 43,
+      "fator_canal": 8,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 20",
+      "descricao": "Descrição sintética reservada 20",
+      "nichos": null
+    },
+    {
+      "id": "video_sintetico_020",
+      "titulo": "Fingi uma conversa inventada — exercício 21",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 1200,
+      "views": 12000,
+      "idade_h": 44,
+      "fator_canal": 9,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 21",
+      "descricao": "Descrição sintética reservada 21",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_021",
+      "titulo": "Fingi uma conversa inventada — exercício 22",
+      "canal": "Canal Fictício 2",
+      "channel_id": "canal_sintetico_2",
+      "duracao": 3600,
+      "views": 12500,
+      "idade_h": 45,
+      "fator_canal": 3,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 22",
+      "descricao": "Descrição sintética reservada 22",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_022",
+      "titulo": "Fingi uma conversa inventada — exercício 23",
+      "canal": "Canal Fictício 3",
+      "channel_id": "canal_sintetico_3",
+      "duracao": 3900,
+      "views": 13000,
+      "idade_h": 46,
+      "fator_canal": 4,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 23",
+      "descricao": "Descrição sintética reservada 23",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_023",
+      "titulo": "Fingi uma conversa inventada — exercício 24",
+      "canal": "Canal Fictício 4",
+      "channel_id": "canal_sintetico_4",
+      "duracao": null,
+      "views": 13500,
+      "idade_h": 47,
+      "fator_canal": 5,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 24",
+      "descricao": "Descrição sintética reservada 24",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_024",
+      "titulo": "Privacidade no laboratório fictício — exercício 25",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 420,
+      "views": 14000,
+      "idade_h": 48,
+      "fator_canal": 6,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 25",
+      "descricao": "Descrição sintética reservada 25",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_025",
+      "titulo": "Privacidade no laboratório fictício — exercício 26",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 480,
+      "views": 14500,
+      "idade_h": 49,
+      "fator_canal": 7,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 26",
+      "descricao": "Descrição sintética reservada 26",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_026",
+      "titulo": "Privacidade no laboratório fictício — exercício 27",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 1200,
+      "views": 15000,
+      "idade_h": 50,
+      "fator_canal": 8,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 27",
+      "descricao": "Descrição sintética reservada 27",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_027",
+      "titulo": "Privacidade no laboratório fictício — exercício 28",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 3600,
+      "views": 15500,
+      "idade_h": 51,
+      "fator_canal": 9,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 28",
+      "descricao": "Descrição sintética reservada 28",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_028",
+      "titulo": "Experimento abstrato — exercício 29",
+      "canal": "Canal Fictício 1",
+      "channel_id": "canal_sintetico_1",
+      "duracao": 3900,
+      "views": 16000,
+      "idade_h": 52,
+      "fator_canal": 3,
+      "mediana_views": 500,
+      "porte": "pequeno",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 29",
+      "descricao": "Descrição sintética reservada 29",
+      "nichos": [
+        "agentes de ia"
+      ]
+    },
+    {
+      "id": "video_sintetico_029",
+      "titulo": "Experimento abstrato — exercício 30",
+      "canal": "Canal Fictício 2",
+      "channel_id": "canal_sintetico_2",
+      "duracao": null,
+      "views": 16500,
+      "idade_h": null,
+      "fator_canal": 4,
+      "mediana_views": 500,
+      "porte": "médio",
+      "categoria": "Conteúdo",
+      "n_amostra": 8,
+      "pessoa": "Pessoa Inventada 30",
+      "descricao": "Descrição sintética reservada 30",
+      "nichos": [
+        "agentes de ia"
+      ]
+    }
+  ],
+  "porque": {
+    "nichos": {
+      "agentes de ia": {
+        "categorias": [
+          {
+            "categoria": "Conteúdo",
+            "videos": 20,
+            "views": 90000,
+            "pct_views": 63.0
+          }
+        ],
+        "total_videos": 30
+      },
+      "chatgpt": {
+        "categorias": [
+          {
+            "categoria": "Conteúdo",
+            "videos": 2,
+            "views": 4500,
+            "pct_views": 75.5
+          }
+        ],
+        "total_videos": 2
+      }
+    }
+  }
+}

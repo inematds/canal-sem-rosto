@@ -1,0 +1,234 @@
+[
+  {
+    "rotulo": "humor e reação",
+    "palavras": [
+      "kkkk",
+      "chamei",
+      "fingi",
+      "pretended",
+      "flirt",
+      "💀",
+      "😱"
+    ],
+    "evitar_sem_rosto": true
+  },
+  {
+    "rotulo": "palestra, evento ou entrevista gravada",
+    "palavras": [
+      "congresso",
+      "palestra",
+      "podcast",
+      "videocast",
+      "entrevista",
+      "professor",
+      "seminário",
+      "live"
+    ],
+    "evitar_sem_rosto": true,
+    "motivo": "depende de quem fala (convidado, palestrante), não do assunto"
+  },
+  {
+    "rotulo": "curso ou guia completo do zero",
+    "palavras": [
+      "curso",
+      "completo",
+      "do zero",
+      "guia completo",
+      "passo a passo",
+      "iniciante",
+      "beginner",
+      "full course",
+      "tutorial completo",
+      "aula completa",
+      "curso completo",
+      "full guide",
+      "do básico ao avançado"
+    ]
+  },
+  {
+    "rotulo": "comparação de ferramentas/modelos",
+    "palavras": [
+      "vs",
+      "versus",
+      "comparei",
+      "comparação",
+      "comparativo",
+      "qual usar",
+      "qual o melhor",
+      "qual é melhor",
+      "melhor que",
+      "comparison",
+      "which is better"
+    ]
+  },
+  {
+    "rotulo": "visual e interface",
+    "palavras": [
+      "ui",
+      "interface",
+      "design",
+      "cara de ia",
+      "layout",
+      "site"
+    ]
+  },
+  {
+    "rotulo": "novidade/recurso novo",
+    "palavras": [
+      "novo",
+      "nova",
+      "lançou",
+      "chegou",
+      "update",
+      "beta",
+      "atualização",
+      "acaba de",
+      "lançamento",
+      "new"
+    ]
+  },
+  {
+    "rotulo": "automação e agentes",
+    "palavras": [
+      "agente",
+      "agentes",
+      "automação",
+      "automatizar",
+      "workflow",
+      "n8n"
+    ]
+  },
+  {
+    "rotulo": "ganhar dinheiro/negócio",
+    "palavras": [
+      "renda",
+      "dinheiro",
+      "negócio",
+      "vender",
+      "cliente",
+      "freelancer",
+      "business",
+      "r$",
+      "10k",
+      "faturar",
+      "lucrar",
+      "ganhar",
+      "saas",
+      "por mês",
+      "mês",
+      "make money"
+    ]
+  },
+  {
+    "rotulo": "prompts e truques",
+    "palavras": [
+      "prompt",
+      "prompts",
+      "truque",
+      "dica",
+      "segredo",
+      "hack"
+    ]
+  },
+  {
+    "rotulo": "erros e soluções",
+    "palavras": [
+      "erro",
+      "erros",
+      "falha",
+      "corrigir",
+      "consertar",
+      "problema"
+    ]
+  },
+  {
+    "rotulo": "privacidade e segurança",
+    "palavras": [
+      "privacidade",
+      "segurança",
+      "golpe",
+      "proteger",
+      "vazamento"
+    ]
+  },
+  {
+    "rotulo": "organização e estudo",
+    "palavras": [
+      "estudo",
+      "estudar",
+      "organizar",
+      "resumo",
+      "planilha",
+      "produtividade"
+    ]
+  },
+  {
+    "rotulo": "imagem, áudio e vídeo",
+    "palavras": [
+      "imagem",
+      "imagens",
+      "áudio",
+      "voz",
+      "vídeo",
+      "video",
+      "música",
+      "images",
+      "image",
+      "gifs",
+      "sprites",
+      "editar vídeos",
+      "edição"
+    ]
+  },
+  {
+    "rotulo": "diário de construção (série de dias)",
+    "palavras": [
+      "day",
+      "dia 1",
+      "dia 2",
+      "desafio",
+      "diário",
+      "construindo",
+      "building"
+    ]
+  },
+  {
+    "rotulo": "ferramentas, skills e plugins grátis",
+    "palavras": [
+      "skills",
+      "skill",
+      "plugins",
+      "plugin",
+      "repositórios",
+      "repositorio",
+      "extensões",
+      "grátis",
+      "gratis",
+      "free"
+    ]
+  },
+  {
+    "rotulo": "opinião e tendência do setor",
+    "palavras": [
+      "bolha",
+      "perigos",
+      "ruining",
+      "estourou",
+      "responder",
+      "apagão",
+      "futuro",
+      "fim do",
+      "acabou"
+    ]
+  },
+  {
+    "rotulo": "dados e análise",
+    "palavras": [
+      "dados",
+      "análise",
+      "analise",
+      "planilhas",
+      "dashboard"
+    ]
+  }
+]

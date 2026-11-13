@@ -1,0 +1,13 @@
+saida/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+dados.json
+**/detalhes-PRIVADO.md
+.codex-kit.log
+.pedido-codex.md
+.agents/
+.codex/
+.aws/
