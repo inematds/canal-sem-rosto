@@ -59,11 +59,20 @@ def main(argv=None):
     p.add_argument('dados')
     p.add_argument('caminhos', nargs='+')
     args = p.parse_args(argv)
+    radar = Path(args.dados).expanduser()
+    if not radar.is_file():
+        print(f'Não achei o arquivo do radar: {radar}. O radar youtube-bombando grava em <pasta do radar>/painel/dados.json '
+              '(ex.: ../youtube-bombando/painel/dados.json ou ~/projetos/youtube-bombando/painel/dados.json).', file=sys.stderr)
+        return 2
+    faltam = [c for c in args.caminhos if not Path(c).exists()]
+    if faltam:
+        print('Não achei: ' + ', '.join(faltam), file=sys.stderr)
+        return 2
     try:
-        dados = json.loads(Path(args.dados).expanduser().read_text(encoding='utf-8'))
+        dados = json.loads(radar.read_text(encoding='utf-8'))
         achados = verificar(dados, args.caminhos)
     except (OSError, ValueError, AttributeError, TypeError):
-        print('Não foi possível verificar. Confira o JSON e os arquivos.', file=sys.stderr)
+        print(f'Não foi possível verificar: {radar} não é um dados.json válido do radar, ou um arquivo não é texto.', file=sys.stderr)
         return 2
     for arquivo, linha, termo in achados:
         print(f'{arquivo}:{linha}:{termo}')

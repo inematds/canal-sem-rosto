@@ -209,7 +209,7 @@ def render_md(r):
     for chave, titulo in [('sinais_fracos', 'Sinais fracos'), ('fora_do_metodo', 'Fora do método')]:
         linhas += ['', '## ' + titulo, '']
         for p in r[chave]:
-            linhas += [f"- {seguro(p['assunto'])}: {br(p['videos'])} vídeos; {br(p['canais'])} canais; mediana {br(p['fator_mediano'], 1)}×; máximo {br(p['fator_max'], 1)}×; {br(p['views_somadas'])} views; {p['faixa_mais_comum']}; idade mediana {br(p['idade_mediana_h'], 1)} h." + (' ' + p['motivo'] if 'motivo' in p else '')]
+            linhas += [f"- {seguro(p['assunto'])}: {br(p['videos'])} {'vídeo' if p['videos'] == 1 else 'vídeos'}; {br(p['canais'])} {'canal' if p['canais'] == 1 else 'canais'}; mediana {br(p['fator_mediano'], 1)}×; máximo {br(p['fator_max'], 1)}×; {br(p['views_somadas'])} views; {p['faixa_mais_comum']}; idade mediana {br(p['idade_mediana_h'], 1)} h." + (' ' + p['motivo'] if 'motivo' in p else '')]
         if not r[chave]:
             linhas.append('Nenhum nesta rodada.')
     linhas += ['', '## As 5 etapas', ''] + [f'{i}. {s}.' for i, s in enumerate(r['etapas'], 1)]
