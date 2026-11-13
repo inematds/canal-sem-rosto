@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>canal-sem-rosto — Your channel can grow without showing your face</title>
+<meta content="You can have a channel without showing your face. What makes it grow is the right topic, not the camera. Faceless channel with a radar: a free kit that finds topics from what’s taking off on YouTube, with the numbers and a faceless format." name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  nav .links a.sec{white-space:nowrap}
+  @media(max-width:1300px){nav .links{gap:14px;font-size:.86rem}}
+  @media(max-width:1280px){nav .links a.sec[href="#regras"]{display:none}}
+  @media(max-width:1120px){nav .links a.sec[href="#metodo"],nav .links a.sec[href="#pautas"]{display:none}}
+  @media(max-width:900px){nav .links a.sec{display:none}}
+  .glos{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+  .glos h3{font-family:Sora;font-size:1rem;margin:0 0 10px}
+  .glos dl{display:grid;grid-template-columns:minmax(120px,max-content) minmax(0,1fr);gap:8px 16px;margin:0;font-size:.9rem}
+  .glos dt{font-weight:600;color:var(--amb)} .glos dd{margin:0;color:var(--mut)}
+  @media(max-width:540px){.glos dl{grid-template-columns:1fr} .glos dd{margin-bottom:6px}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#8b8b99} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;height:auto;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+  table.n{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:10px}
+  table.n th,table.n td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}
+  table.n th{color:var(--amb);font-family:Sora}
+  /* gráficos comparativos (âmbar = agora/realidade, azul = antes/cenário, hachura = projeção) */
+  :root{--c-now:#BF8224;--c-old:#4D8FE0}
+  body.light{--c-now:#B9791D;--c-old:#2F6FC4}
+  /* relatórios originais + gráficos originais + ajuste */
+  /* cenário original com projeções por cima + explicações */
+  /* plano de ação + animação da janela */
+  @keyframes spin{to{transform:rotate(360deg)}}
+  /* parte técnica isolada embaixo */
+  .techhead{background:var(--bg2);border-top:3px solid var(--amb);padding:58px 0 8px}
+  .techhead h2{font-family:Sora;margin:.3em 0 0}
+  .techzone{background:var(--bg2)}
+  .nota-big{font:800 2.2rem Sora,sans-serif;color:var(--amb);display:block;margin-bottom:.1em}
+  .radar{margin-top:22px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amb);border-radius:12px;padding:16px 20px;color:var(--mut)}
+  .radar b{color:var(--txt)}
+  nav .brand{white-space:nowrap}
+
+  .barras{display:grid;gap:8px;max-width:820px}
+  .bl{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:.92rem}
+  .bl span{color:var(--mut)} .bl b{font-family:Sora;color:var(--txt);text-align:right}
+  .bl i{display:block;height:14px;border-radius:7px;background:linear-gradient(90deg,var(--c-now) var(--w),var(--line) var(--w))}
+  @media(max-width:540px){.bl{grid-template-columns:110px minmax(0,1fr) 54px;font-size:.84rem}}
+  table.n td{vertical-align:top}
+</style>
+<link href="https://inematds.github.io/canal-sem-rosto/guia/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/canal-sem-rosto/guia/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/canal-sem-rosto/guia/es/" hreflang="es" rel="alternate"/></head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="#top"><span class="emoji">🎙️</span> canal-sem-rosto</a>
+<span class="sep">|</span>
+<span class="clubpro">
+<a class="inema" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<span class="sep">-</span>
+<a class="pro" href="https://inema.pro" rel="noopener" target="_blank">PRO</a>
+</span>
+<div class="links">
+<a class="sec" href="#video">Video</a>
+<a class="sec" href="#radar">The radar</a>
+<a class="sec" href="#pautas">Topics</a>
+<a class="sec" href="#metodo">Method</a>
+<a class="sec" href="#regras">Rules</a>
+<a class="sec" href="#tecnico">Kit (technical)</a>
+<span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
+<button aria-label="Switch topic" class="tgl" id="themeToggle" title="Switch topic">🌙</button>
+<a class="btn" href="https://github.com/inematds/canal-sem-rosto" rel="noopener" target="_blank">GitHub</a>
+</div>
+</div></nav>
+<header class="hero" id="top">
+<div class="glow"></div>
+<div class="wrap">
+<div>
+<span class="chip">canal-sem-rosto · free kit · runs on your computer</span>
+<h1>Your channel can grow <span class="amb">without showing your face</span></h1>
+<p class="lead">What makes a channel grow is the right topic, not the camera. The <strong>faceless channel with a radar</strong> method picks the topic based on what the radar showed: subjects where small channels got many times their usual views.</p>
+<div class="cta">
+<a class="btn" href="#radar">Understand in 5 minutes</a>
+<a class="btn ghost" href="https://github.com/inematds/canal-sem-rosto" rel="noopener" target="_blank">View on GitHub</a>
+</div>
+</div>
+<figure><img alt="Your faceless channel: a studio with a microphone, empty chair, camera turned off, and a screen showing an upward-trending chart and a golden radar" src="../assets/banner-en.jpg"/></figure>
+</div>
+</header>
+<section class="resumo" id="resumo"><div class="wrap">
+<span class="chip">In short</span>
+<p>A lot of people want to have an AI channel, but don't want to appear on camera. The good news: in our YouTube radar, the topic—not the person on camera—drove the most views. The <strong>faceless channel with a radar</strong> is a 5-step method and a free kit: it reads the radar of what’s trending, separates the topics where small and medium channels broke through, and suggests topics with the numbers and a faceless format for each one. You need a computer with Python and the radar <a href="https://inematds.github.io/youtube-bombando/guia/" rel="noopener" target="_blank">youtube-bombando</a> (also free). There’s no promise of money or views: the radar shows an opportunity.</p>
+<figure style="margin:22px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img alt="Faceless channel with a radar: radar for what’s taking off, topics with numbers, scripts with hooks, faceless production, verified YouTube rules, measure and adjust" loading="lazy" src="../assets/banner-grade-en.jpg" style="width:100%;display:block"/></figure>
+</div></section>
+<section id="video"><div class="wrap">
+<span class="chip">Video</span>
+<h2>Understand in <span class="amb">3 minutes</span></h2>
+<!-- VIDEO: entra o explicavideo do projeto quando publicado -->
+<p class="sub">The explainer video for this kit is in production and will appear here as soon as it's published.</p>
+</div></section>
+<section id="radar"><div class="wrap">
+<span class="chip">What the radar showed</span>
+<h2>The topic drove more than <span class="amb">the face</span></h2>
+<p class="sub">Our radar run on 12/11/2026: 320 videos from the week across 7 AI topics. For each video, the radar compares its views with that channel’s usual number (the median of its recent videos). It made <b>3 times or more</b> the usual? Then the subject broke out of the channel's bubble.</p>
+<div class="grid g3">
+<div class="card"><span class="nota-big">63%</span><h3>of the views in "making money with AI"</h3><p>came from videos that got 3× or more the channel’s usual views. The audience was interested in the topic.</p></div>
+<div class="card"><span class="nota-big">50</span><h3>videos from small and medium channels</h3><p>broke out of their bubble through their content this round (compared with 5 from large channels).</p></div>
+<div class="card"><span class="nota-big">810×</span><h3>the channel's usual views</h3><p>was the biggest jump of the round, on a small channel, about a new ChatGPT feature for businesses.</p></div>
+</div>
+<h3 style="margin:34px 0 6px;font-family:Sora">How many views came from the topic, by theme</h3>
+<p class="mut" style="margin:0 0 12px;font-size:.92rem">Share of each topic's views that came from videos with 3× or more the channel's usual results (the radar's "Content" category).</p>
+<div aria-label="Making money with AI 63%, ChatGPT 55.6%, vibe coding 53.9%, Claude Code 42.2%, artificial intelligence 21.8%, AI agents 14.7%, n8n 0%" class="barras" role="img">
+<div class="bl"><span>making money with AI</span><i style="--w:63%"></i><b>63,0%</b></div>
+<div class="bl"><span>ChatGPT</span><i style="--w:55.6%"></i><b>55,6%</b></div>
+<div class="bl"><span>vibe coding</span><i style="--w:53.9%"></i><b>53,9%</b></div>
+<div class="bl"><span>Claude Code</span><i style="--w:42.2%"></i><b>42,2%</b></div>
+<div class="bl"><span>artificial intelligence</span><i style="--w:21.8%"></i><b>21,8%</b></div>
+<div class="bl"><span>AI agents</span><i style="--w:14.7%"></i><b>14,7%</b></div>
+<div class="bl"><span>n8n automation</span><i style="--w:0.6%"></i><b>0%</b></div>
+</div>
+<h3 style="margin:34px 0 6px;font-family:Sora">Duration: long-form video went further</h3>
+<p class="mut" style="margin:0 0 12px;font-size:.92rem">Average number of times the channel's usual results were reached, by video duration (same round).</p>
+<div aria-label="Over 60 minutes 4.2 times; 8 to 20 minutes 1.8 times; 20 to 60 minutes 1.0 time" class="barras" role="img">
+<div class="bl"><span>more than 60 min</span><i style="--w:100%"></i><b>4,2×</b></div>
+<div class="bl"><span>8 to 20 min</span><i style="--w:42.9%"></i><b>1,8×</b></div>
+<div class="bl"><span>20 to 60 min</span><i style="--w:23.8%"></i><b>1,0×</b></div>
+</div>
+<div class="radar"><b>How to read:</b> this is a snapshot of one week, not a rule. The radar shows a signal (the subject drew interest); it doesn't prove the cause. That's why the method ends by measuring your own video on the radar again.</div>
+</div></section>
+<section id="pautas"><div class="wrap">
+<span class="chip">Topics</span>
+<h2>Topics the kit removed <span class="amb">from this round</span></h2>
+<p class="sub">Real output from the kit based on the 12/11/2026 radar. Only topics where <b>at least 2 different small or medium-sized channels</b> got 3× or more their usual views, with 1,000 views or more. No channel or video names appear in the output: only the subject and the numbers.</p>
+<div style="overflow-x:auto">
+<table class="n" style="min-width:680px">
+<tr><th>#</th><th>Topic</th><th>Channels</th><th>How many times the usual number (median)</th><th>Most common duration</th><th>Faceless format</th></tr>
+<tr><td>1</td><td>complete course or guide from scratch, in Claude Code</td><td>4</td><td>27,3×</td><td>20–60 min</td><td>screen recording with your narration, a project in stages</td></tr>
+<tr><td>2</td><td>Claude Code (multiple topics)</td><td>3</td><td>11,3×</td><td>8–20 min</td><td>animated explainer or diagram with your voice, a case from start to finish</td></tr>
+<tr><td>3</td><td>automation and agents, under AI agents</td><td>3</td><td>4,9×</td><td>20–60 min</td><td>screen recording with your narration, a project in stages</td></tr>
+<tr><td>4</td><td>business, in ChatGPT</td><td>2</td><td>412,1×</td><td>up to 8 min</td><td>animated explainer with your voice, a question answered with a demonstration</td></tr>
+<tr><td>5</td><td>industry opinion and trends, in AI</td><td>2</td><td>57,8×</td><td>8–20 min</td><td>animated explainer with your voice and analysis</td></tr>
+<tr><td>6</td><td>build diary (a series of days), in vibe coding</td><td>2</td><td>28,7×</td><td>more than 60 min</td><td>chapters with the screen and your voice</td></tr>
+<tr><td>7</td><td>images, audio, and video, in ChatGPT</td><td>2</td><td>16,2×</td><td>8–20 min</td><td>demonstration with your own example</td></tr>
+<tr><td>8</td><td>making money and business, in making money with AI</td><td>2</td><td>15,5×</td><td>20–60 min</td><td>animated explainer with your voice, a project in stages</td></tr>
+<tr><td>9</td><td>a new feature in AI agents</td><td>2</td><td>3,7×</td><td>8–20 min</td><td>commentary on a news story with your opinion and a test of your own</td></tr>
+<tr><td>10</td><td>free tools, skills, and plugins, in Claude Code</td><td>2</td><td>3,4×</td><td>8–20 min</td><td>demonstration with your own example</td></tr>
+</table>
+</div>
+<div class="radar"><b>Outside the method:</b> humor and reaction videos (4 channels, 56.6× the usual views) and recorded talks or interviews (3 channels, 30.2×) also broke through, but they depend on who appears or speaks. The kit lists them separately and doesn’t suggest them as faceless topics.</div>
+<p class="mut" style="margin-top:16px">The numbers change with each round. To get today's topics for your subject, <a href="#guia">see how to use it ↓</a>.</p>
+</div></section>
+<section id="metodo"><div class="wrap">
+<span class="chip">Method</span>
+<h2>Faceless channel with a radar, <span class="amb">in 5 steps</span></h2>
+<p class="sub">From topic to published video, then back to the radar to see how it did.</p>
+<div class="step"><div class="b">1</div><div><h3>Choose a topic using the radar</h3><p>Run the radar for what’s taking off in your topic and ask the kit for topics. A good topic is one where a small channel got many times its usual views: the audience came for the topic, not the name.</p></div></div>
+<div class="step"><div class="b">2</div><div><h3>Write a script with a hook</h3><p>In the first 15 seconds, speak to the viewer's pain point or desire using "you." One idea per video. The kit <a href="https://inematds.github.io/curiosidade-viral/guia/" rel="noopener" target="_blank">curiosidade-viral</a> helps find the hook.</p></div></div>
+<div class="step"><div class="b">3</div><div><h3>Create without showing your face, with authorship</h3><p>A screen recording with your narration, an animated whiteboard or diagram, and a real test with commentary. Showing your face is optional; thinking, testing, and explaining aren’t.</p></div></div>
+<div class="step"><div class="b">4</div><div><h3>Publish based on the promise</h3><p>The title and thumbnail say what the viewer gets. The length follows what the radar showed for your topic. Publish at a pace you can keep up.</p></div></div>
+<div class="step"><div class="b">5</div><div><h3>Measure again with the radar</h3><p>Seven days later, compare your video with your channel’s usual number. Did it break through? Keep the topic. If not, change the topic, not the camera.</p></div></div>
+</div></section>
+<section id="regras"><div class="wrap">
+<span class="chip">YouTube rules</span>
+<h2>Faceless <span class="amb">isn't anonymous</span></h2>
+<p class="sub">Checked on 11/13/2026 against YouTube’s official help pages. This changes: always check the source before deciding.</p>
+<div class="grid g3">
+<div class="card"><h3>To join the Partner Program, today</h3><p>1,000 subscribers and 4,000 public watch hours in the last 12 months, or 1,000 subscribers and 10 million Shorts views in 90 days. <a href="https://support.google.com/youtube/answer/72851" rel="noopener" target="_blank">Source</a></p></div>
+<div class="card"><h3>Starting 2/1/2027, for new channels</h3><p>1,000 subscribers and 8,000 hours in 365 days, or 20 million Shorts views in 90 days. Anyone already in the program is unaffected. Fan-funding features remain available at 500 subscribers. <a href="https://support.google.com/youtube/answer/12843009" rel="noopener" target="_blank">Source</a></p></div>
+<div class="card"><h3>What doesn't monetize</h3><p>Template-based and repetitive content: image slideshows or scrolling text without narration, generic AI content mass-produced without the creator’s perspective, reading text from a website or news story you didn’t create. <a href="https://support.google.com/youtube/answer/1311392" rel="noopener" target="_blank">Source</a></p></div>
+</div>
+<div class="radar"><b>That’s why the kit never suggests</b> slideshow, scrolling text, news reading, or a series of AI videos in the same format. Every suggested format has its own voice, test, or explanation.</div>
+</div></section>
+<section id="kits"><div class="wrap">
+<span class="chip">Related kits</span>
+<h2>From the radar to the <span class="amb">script</span></h2>
+<p class="sub">Three free INEMA kits that complement each other.</p>
+<div class="grid g3">
+<a class="card" href="https://inematds.github.io/youtube-bombando/guia/" rel="noopener" target="_blank"><h3>youtube-bombando</h3><p>The radar: every morning, what's trending in your topic, and why.</p></a>
+<div class="card"><h3>canal-sem-rosto (this)</h3><p>Turns the radar into faceless topics, with the numbers and format.</p></div>
+<a class="card" href="https://inematds.github.io/curiosidade-viral/guia/" rel="noopener" target="_blank"><h3>curiosidade-viral</h3><p>Helps you write the hook that keeps people watching.</p></a>
+</div>
+</div></section>
+<div class="techhead" id="tecnico"><div class="wrap">
+<span class="chip">Technical section</span>
+<h2>The kit: <span class="amb">for anyone who wants topics about their own subject</span></h2>
+<p class="sub">From here down is the technical part: downloading, running, and reading the topics. You <strong>not required</strong> from this part to understand what's above.</p>
+</div></div>
+<div class="techzone">
+<section id="oque"><div class="wrap">
+<span class="chip">What it is</span>
+<h2>Two scripts <span class="amb">and a method</span></h2>
+<div class="grid g3">
+<div class="card"><h3>pautas.py</h3><p>Read the radar file (<code>dados.json</code>) and saves <code>saida/pautas.md</code> e <code>saida/pautas.json</code>: up to 10 topics, weak signals, and what’s outside the method.</p></div>
+<div class="card"><h3>checa_sem_fonte.py</h3><p>Check your script or output for another creator’s channel name, title, or video ID before publishing.</p></div>
+<div class="card"><h3>metodo/</h3><p>The 5 steps, one per file, and the YouTube rules checked against the source, with the date.</p></div>
+</div>
+</div></section>
+<section id="fluxo"><div class="wrap">
+<span class="chip">How it works</span>
+<h2>From the radar to the <span class="amb">topic</span></h2>
+<div class="flow">
+<span>radar's dados.json</span><span class="arr">→</span>
+<span>content only, small or medium channel, 3× or more</span><span class="arr">→</span>
+<span>title topic (temas.json)</span><span class="arr">→</span>
+<span>groups by theme and topic</span><span class="arr">→</span>
+<span>2+ different channels</span><span class="arr">→</span>
+<span>pautas.md + pautas.json</span>
+</div>
+<p class="sub" style="margin-top:18px">Each video's title is used only to identify the topic (full course, comparison, news, business, etc.) and never appears in the output. Order: most distinct channels first, then highest median, then most views. If fewer than 10 topics qualify, the kit says how many qualified and doesn't fill the list with weak signals. Topics are in <code>temas.json</code> and you can edit it.</p>
+</div></section>
+<section id="pre"><div class="wrap">
+<span class="chip">Prerequisites</span>
+<h2>What you need</h2>
+<div class="grid g3">
+<div class="card"><h3>Python 3.10 or newer</h3><p>Standard library only, nothing to install with pip. Check:</p><pre><span class="k">python3 --version</span></pre></div>
+<div class="card"><h3>git</h3><p>To download the kit:</p><pre><span class="k">git clone https://github.com/inematds/canal-sem-rosto</span>
+<span class="k">cd canal-sem-rosto</span></pre></div>
+<div class="card"><h3>The youtube-bombando radar</h3><p>It’s what generates the <code>dados.json</code>. Install it with <a href="https://inematds.github.io/youtube-bombando/guia/" rel="noopener" target="_blank">its guide</a> and swap in topics for your niche.</p></div>
+</div>
+</div></section>
+<section id="guia"><div class="wrap">
+<span class="chip">User guide · step by step</span>
+<h2>In <span class="amb">5 minutes</span></h2>
+<div class="step"><div class="b">1</div><div>
+<h3>See the example</h3>
+<p>The repository includes a mock radar so you can see the output before you have your own:</p>
+<pre><span class="k">python3 pautas.py exemplos/dados-sintetico.json</span>
+<span class="c"># open saida/pautas.md</span></pre>
+</div></div>
+<div class="step"><div class="b">2</div><div>
+<h3>Run it on your radar</h3>
+<p>Without a path, the kit looks for the radar in <code>~/projetos/youtube-bombando/painel/dados.json</code>. If it’s somewhere else, provide the path:</p>
+<pre><span class="k">python3 pautas.py</span>
+<span class="k">python3 pautas.py /caminho/para/dados.json</span></pre>
+</div></div>
+<div class="step"><div class="b">3</div><div>
+<h3>Adjust the filter if you want</h3>
+<p>Default: 10 topics, 1,000 views or more, 3× the channel's usual results, at least 5 videos in the channel average.</p>
+<pre><span class="k">python3 pautas.py --n 5 --piso-views 5000 --fator 4</span></pre>
+</div></div>
+<div class="step"><div class="b">4</div><div>
+<h3>Study the videos (just for you)</h3>
+<p>With <code>--detalhes</code>, the kit also saves <code>saida/detalhes-PRIVADO.md</code> with titles and channels for each topic, for you to study. Don't publish this file.</p>
+<pre><span class="k">python3 pautas.py --detalhes</span></pre>
+</div></div>
+<div class="step"><div class="b">5</div><div>
+<h3>Review the script before publishing</h3>
+<p>Check your text for any channel, title, or radar ID:</p>
+<pre><span class="k">python3 checa_sem_fonte.py /caminho/para/dados.json roteiro.txt</span>
+<span class="c"># "no third-party sources found" = you can proceed</span></pre>
+</div></div>
+<div class="step"><div class="b">6</div><div>
+<h3>Run the tests (optional)</h3>
+<pre><span class="k">python3 -m unittest discover -s tests</span></pre>
+</div></div>
+</div></section>
+<section id="exemplos"><div class="wrap">
+<span class="chip">Examples</span>
+<h2>What's next <span class="amb">in the repository</span></h2>
+<table class="n">
+<tr><th>Archive</th><th>What it is</th></tr>
+<tr><td><code>exemplos/dados-sintetico.json</code></td><td>fictional radar, with made-up channels and titles, covering difficult cases (no channel size, no duration, humor, large channel)</td></tr>
+<tr><td><code>exemplos/pautas-exemplo.md</code></td><td>the kit’s output based on this made-up radar</td></tr>
+<tr><td><code>metodo/regras-youtube.md</code></td><td>the rules for the Partner Program and repetitive content, with official sources and the date they were checked</td></tr>
+</table>
+</div></section>
+<section id="roadmap"><div class="wrap">
+<span class="chip">Roadmap</span>
+<h2>Next steps</h2>
+<div class="phase"><div class="tag">Today</div><div class="d"><strong>Topics, fact-checking, and method</strong><span>17 editable topics, filters with minimum view and channel counts, 15 tests, YouTube rules checked on 11/13/2026.</span></div></div>
+<div class="phase"><div class="tag">Next</div><div class="d"><strong>Round history</strong><span>Compare the same topic across several radar runs to see if it remains strong.</span></div></div>
+<div class="phase"><div class="tag">After</div><div class="d"><strong>Your channel on the radar</strong><span>Automatic Step 5: mark your videos and show how each one performed against your usual results.</span></div></div>
+</div></section>
+</div>
+<footer>
+<div class="wrap">
+<div class="pill">Python 3.10+</div><div class="pill">no dependencies</div><div class="pill">no API</div><div class="pill">MIT</div>
+<p style="margin-top:18px">canal-sem-rosto — faceless channel with a radar ·
+      <a href="https://github.com/inematds/canal-sem-rosto">inematds/canal-sem-rosto</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+</div>
+</footer>
+<script>
+  (function(){
+    var KEY='canal-sem-rosto-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; }
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      localStorage.setItem(KEY, light?'light':'dark');
+    });
+  })();
+</script>
+</body>
+</html>
