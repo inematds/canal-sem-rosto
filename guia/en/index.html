@@ -131,6 +131,7 @@
   .bl i{display:block;height:14px;border-radius:7px;background:linear-gradient(90deg,var(--c-now) var(--w),var(--line) var(--w))}
   @media(max-width:540px){.bl{grid-template-columns:110px minmax(0,1fr) 54px;font-size:.84rem}}
   table.n td{vertical-align:top}
+  @media(min-width:760px){.rolar{display:none}}
 </style>
 <link href="https://inematds.github.io/canal-sem-rosto/guia/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/canal-sem-rosto/guia/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/canal-sem-rosto/guia/es/" hreflang="es" rel="alternate"/></head>
 <body>
@@ -160,7 +161,7 @@
 <div>
 <span class="chip">canal-sem-rosto · free kit · runs on your computer</span>
 <h1>Your channel can grow <span class="amb">without showing your face</span></h1>
-<p class="lead">What makes a channel grow is the right topic, not the camera. The <strong>faceless channel with a radar</strong> method picks the topic based on what the radar showed: subjects where small channels got many times their usual views.</p>
+<p class="lead">What makes a channel grow is the right topic, not the camera. The <strong>faceless channel with a radar</strong> chooses a topic based on what the radar showed (the radar is a free dashboard that shows, every morning, videos that far exceeded their channel's own typical views): topics where small channels got many times their usual numbers.</p>
 <div class="cta">
 <a class="btn" href="#radar">Understand in 5 minutes</a>
 <a class="btn ghost" href="https://github.com/inematds/canal-sem-rosto" rel="noopener" target="_blank">View on GitHub</a>
@@ -171,7 +172,7 @@
 </header>
 <section class="resumo" id="resumo"><div class="wrap">
 <span class="chip">In short</span>
-<p>A lot of people want to have an AI channel, but don't want to appear on camera. The good news: in our YouTube radar, the topic—not the person on camera—drove the most views. The <strong>faceless channel with a radar</strong> is a 5-step method and a free kit: it reads the radar of what’s trending, separates the topics where small and medium channels broke through, and suggests topics with the numbers and a faceless format for each one. You need a computer with Python and the radar <a href="https://inematds.github.io/youtube-bombando/guia/" rel="noopener" target="_blank">youtube-bombando</a> (also free). There’s no promise of money or views: the radar shows an opportunity.</p>
+<p>A lot of people want to have an AI channel, but don't want to appear on camera. The good news: in our YouTube radar, the topic—not the person on camera—drove the most views. The <strong>faceless channel with a radar</strong> is a 5-step method and a free kit: it reads the radar of what’s trending, separates the topics where small and medium channels broke through, and suggests topics with the numbers and a faceless format for each one. You need a computer with Python and the radar <a href="https://inematds.github.io/youtube-bombando/guia/en/" rel="noopener" target="_blank">youtube-bombando</a> (also free). There’s no promise of money or views: the radar shows an opportunity.</p>
 <figure style="margin:22px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img alt="Faceless channel with a radar: radar for what’s taking off, topics with numbers, scripts with hooks, faceless production, verified YouTube rules, measure and adjust" loading="lazy" src="../assets/banner-grade-en.jpg" style="width:100%;display:block"/></figure>
 </div></section>
 <section id="video"><div class="wrap">
@@ -183,7 +184,7 @@
 <section id="radar"><div class="wrap">
 <span class="chip">What the radar showed</span>
 <h2>The topic drove more than <span class="amb">the face</span></h2>
-<p class="sub">Our radar run on 12/11/2026: 320 videos from the week across 7 AI topics. For each video, the radar compares its views with that channel’s usual number (the median of its recent videos). It made <b>3 times or more</b> the usual? Then the subject broke out of the channel's bubble.</p>
+<p class="sub">Our radar run on Nov 12, 2026: 320 videos from the week across 7 AI topics. For each video, the radar compares its views with that channel’s usual number (the median of its recent videos). Did it get <b>3 times or more</b> the usual number? Then the topic broke out beyond the channel's audience. Channel <b>small</b> = fewer than 10,000 subscribers; <b>medium</b> = 10,000 to 500,000; above that, large.</p>
 <div class="grid g3">
 <div class="card"><span class="nota-big">63%</span><h3>of the views in "making money with AI"</h3><p>came from videos that got 3× or more the channel’s usual views. The audience was interested in the topic.</p></div>
 <div class="card"><span class="nota-big">50</span><h3>videos from small and medium channels</h3><p>broke out of their bubble through their content this round (compared with 5 from large channels).</p></div>
@@ -192,40 +193,42 @@
 <h3 style="margin:34px 0 6px;font-family:Sora">How many views came from the topic, by theme</h3>
 <p class="mut" style="margin:0 0 12px;font-size:.92rem">Share of each topic's views that came from videos with 3× or more the channel's usual results (the radar's "Content" category).</p>
 <div aria-label="Making money with AI 63%, ChatGPT 55.6%, vibe coding 53.9%, Claude Code 42.2%, artificial intelligence 21.8%, AI agents 14.7%, n8n 0%" class="barras" role="img">
-<div class="bl"><span>making money with AI</span><i style="--w:63%"></i><b>63,0%</b></div>
-<div class="bl"><span>ChatGPT</span><i style="--w:55.6%"></i><b>55,6%</b></div>
-<div class="bl"><span>vibe coding</span><i style="--w:53.9%"></i><b>53,9%</b></div>
-<div class="bl"><span>Claude Code</span><i style="--w:42.2%"></i><b>42,2%</b></div>
-<div class="bl"><span>artificial intelligence</span><i style="--w:21.8%"></i><b>21,8%</b></div>
-<div class="bl"><span>AI agents</span><i style="--w:14.7%"></i><b>14,7%</b></div>
+<div class="bl"><span>making money with AI</span><i style="--w:63%"></i><b>63.0%</b></div>
+<div class="bl"><span>ChatGPT</span><i style="--w:55.6%"></i><b>55.6%</b></div>
+<div class="bl"><span>vibe coding</span><i style="--w:53.9%"></i><b>53.9%</b></div>
+<div class="bl"><span>Claude Code</span><i style="--w:42.2%"></i><b>42.2%</b></div>
+<div class="bl"><span>artificial intelligence</span><i style="--w:21.8%"></i><b>21.8%</b></div>
+<div class="bl"><span>AI agents</span><i style="--w:14.7%"></i><b>14.7%</b></div>
 <div class="bl"><span>n8n automation</span><i style="--w:0.6%"></i><b>0%</b></div>
 </div>
-<h3 style="margin:34px 0 6px;font-family:Sora">Duration: long-form video went further</h3>
-<p class="mut" style="margin:0 0 12px;font-size:.92rem">Average number of times the channel's usual results were reached, by video duration (same round).</p>
-<div aria-label="Over 60 minutes 4.2 times; 8 to 20 minutes 1.8 times; 20 to 60 minutes 1.0 time" class="barras" role="img">
-<div class="bl"><span>more than 60 min</span><i style="--w:100%"></i><b>4,2×</b></div>
-<div class="bl"><span>8 to 20 min</span><i style="--w:42.9%"></i><b>1,8×</b></div>
-<div class="bl"><span>20 to 60 min</span><i style="--w:23.8%"></i><b>1,0×</b></div>
+<h3 style="margin:34px 0 6px;font-family:Sora">Duration: short and very long videos went further</h3>
+<p class="mut" style="margin:0 0 12px;font-size:.92rem">How many times the channel's own typical number, by video duration: the middle value in each range (median), from the same round. The number of videos is in parentheses.</p>
+<div aria-label="Under 8 minutes: 5.7 times; over 60 minutes: 4.2 times; 8 to 20 minutes: 1.8 times; 20 to 60 minutes: 1.0 times" class="barras" role="img">
+<div class="bl"><span>up to 8 min (20)</span><i style="--w:100%"></i><b>5.7×</b></div>
+<div class="bl"><span>over 60 min (33)</span><i style="--w:73.7%"></i><b>4.2×</b></div>
+<div class="bl"><span>8 to 20 min (48)</span><i style="--w:31.6%"></i><b>1.8×</b></div>
+<div class="bl"><span>20 to 60 min (31)</span><i style="--w:17.5%"></i><b>1.0×</b></div>
 </div>
 <div class="radar"><b>How to read:</b> this is a snapshot of one week, not a rule. The radar shows a signal (the subject drew interest); it doesn't prove the cause. That's why the method ends by measuring your own video on the radar again.</div>
 </div></section>
 <section id="pautas"><div class="wrap">
 <span class="chip">Topics</span>
-<h2>Topics the kit removed <span class="amb">from this round</span></h2>
-<p class="sub">Real output from the kit based on the 12/11/2026 radar. Only topics where <b>at least 2 different small or medium-sized channels</b> got 3× or more their usual views, with 1,000 views or more. No channel or video names appear in the output: only the subject and the numbers.</p>
+<h2>Topics the kit pulled <span class="amb">from this round</span></h2>
+<p class="sub">Real output from the kit based on the Nov 12, 2026 radar. Only topics where <b>at least 2 different small or medium-sized channels</b> got 3× or more their usual numbers, with at least 1,000 views. No channel or video names appear in the output: only the topic and numbers (here with simplified topic labels).</p>
+<p class="mut rolar" style="font-size:.85rem;margin:0 0 6px">← drag the table sideways to see the faceless format →</p>
 <div style="overflow-x:auto">
 <table class="n" style="min-width:680px">
 <tr><th>#</th><th>Topic</th><th>Channels</th><th>How many times the usual number (median)</th><th>Most common duration</th><th>Faceless format</th></tr>
-<tr><td>1</td><td>complete course or guide from scratch, in Claude Code</td><td>4</td><td>27,3×</td><td>20–60 min</td><td>screen recording with your narration, a project in stages</td></tr>
-<tr><td>2</td><td>Claude Code (multiple topics)</td><td>3</td><td>11,3×</td><td>8–20 min</td><td>animated explainer or diagram with your voice, a case from start to finish</td></tr>
-<tr><td>3</td><td>automation and agents, under AI agents</td><td>3</td><td>4,9×</td><td>20–60 min</td><td>screen recording with your narration, a project in stages</td></tr>
-<tr><td>4</td><td>business, in ChatGPT</td><td>2</td><td>412,1×</td><td>up to 8 min</td><td>animated explainer with your voice, a question answered with a demonstration</td></tr>
-<tr><td>5</td><td>industry opinion and trends, in AI</td><td>2</td><td>57,8×</td><td>8–20 min</td><td>animated explainer with your voice and analysis</td></tr>
-<tr><td>6</td><td>build diary (a series of days), in vibe coding</td><td>2</td><td>28,7×</td><td>more than 60 min</td><td>chapters with the screen and your voice</td></tr>
-<tr><td>7</td><td>images, audio, and video, in ChatGPT</td><td>2</td><td>16,2×</td><td>8–20 min</td><td>demonstration with your own example</td></tr>
-<tr><td>8</td><td>making money and business, in making money with AI</td><td>2</td><td>15,5×</td><td>20–60 min</td><td>animated explainer with your voice, a project in stages</td></tr>
-<tr><td>9</td><td>a new feature in AI agents</td><td>2</td><td>3,7×</td><td>8–20 min</td><td>commentary on a news story with your opinion and a test of your own</td></tr>
-<tr><td>10</td><td>free tools, skills, and plugins, in Claude Code</td><td>2</td><td>3,4×</td><td>8–20 min</td><td>demonstration with your own example</td></tr>
+<tr><td>1</td><td>complete course or guide from scratch, in Claude Code</td><td>4</td><td>27.3×</td><td>20–60 min</td><td>screen recording with your narration, a project in stages</td></tr>
+<tr><td>2</td><td>Claude Code (multiple topics)</td><td>3</td><td>11.3×</td><td>8–20 min</td><td>animated explainer or diagram with your voice, a case from start to finish</td></tr>
+<tr><td>3</td><td>automation and agents, under AI agents</td><td>3</td><td>4.9×</td><td>20–60 min</td><td>screen recording with your narration, a project in stages</td></tr>
+<tr><td>4</td><td>business, in ChatGPT</td><td>2</td><td>412.1×</td><td>up to 8 min</td><td>animated explainer with your voice, a question answered with a demonstration</td></tr>
+<tr><td>5</td><td>industry opinion and trends, in AI</td><td>2</td><td>57.8×</td><td>8–20 min</td><td>animated explainer with your voice and analysis</td></tr>
+<tr><td>6</td><td>build diary (a series of days), in vibe coding</td><td>2</td><td>28.7×</td><td>more than 60 min</td><td>chapters with the screen and your voice</td></tr>
+<tr><td>7</td><td>images, audio, and video, in ChatGPT</td><td>2</td><td>16.2×</td><td>8–20 min</td><td>demonstration with your own example</td></tr>
+<tr><td>8</td><td>making money and business, in making money with AI</td><td>2</td><td>15.5×</td><td>20–60 min</td><td>animated explainer with your voice, a project in stages</td></tr>
+<tr><td>9</td><td>a new feature in AI agents</td><td>2</td><td>3.7×</td><td>8–20 min</td><td>commentary on a news story with your opinion and a test of your own</td></tr>
+<tr><td>10</td><td>free tools, skills, and plugins, in Claude Code</td><td>2</td><td>3.4×</td><td>8–20 min</td><td>demonstration with your own example</td></tr>
 </table>
 </div>
 <div class="radar"><b>Outside the method:</b> humor and reaction videos (4 channels, 56.6× the usual views) and recorded talks or interviews (3 channels, 30.2×) also broke through, but they depend on who appears or speaks. The kit lists them separately and doesn’t suggest them as faceless topics.</div>
@@ -236,18 +239,18 @@
 <h2>Faceless channel with a radar, <span class="amb">in 5 steps</span></h2>
 <p class="sub">From topic to published video, then back to the radar to see how it did.</p>
 <div class="step"><div class="b">1</div><div><h3>Choose a topic using the radar</h3><p>Run the radar for what’s taking off in your topic and ask the kit for topics. A good topic is one where a small channel got many times its usual views: the audience came for the topic, not the name.</p></div></div>
-<div class="step"><div class="b">2</div><div><h3>Write a script with a hook</h3><p>In the first 15 seconds, speak to the viewer's pain point or desire using "you." One idea per video. The kit <a href="https://inematds.github.io/curiosidade-viral/guia/" rel="noopener" target="_blank">curiosidade-viral</a> helps find the hook.</p></div></div>
+<div class="step"><div class="b">2</div><div><h3>Write a script with a hook</h3><p>In the first 15 seconds, speak to the viewer's pain point or desire using "you." One idea per video. The kit <a href="https://inematds.github.io/curiosidade-viral/guia/en/" rel="noopener" target="_blank">curiosidade-viral</a> helps find the hook.</p></div></div>
 <div class="step"><div class="b">3</div><div><h3>Create without showing your face, with authorship</h3><p>A screen recording with your narration, an animated whiteboard or diagram, and a real test with commentary. Showing your face is optional; thinking, testing, and explaining aren’t.</p></div></div>
 <div class="step"><div class="b">4</div><div><h3>Publish based on the promise</h3><p>The title and thumbnail say what the viewer gets. The length follows what the radar showed for your topic. Publish at a pace you can keep up.</p></div></div>
 <div class="step"><div class="b">5</div><div><h3>Measure again with the radar</h3><p>Seven days later, compare your video with your channel’s usual number. Did it break through? Keep the topic. If not, change the topic, not the camera.</p></div></div>
 </div></section>
 <section id="regras"><div class="wrap">
 <span class="chip">YouTube rules</span>
-<h2>Faceless <span class="amb">isn't anonymous</span></h2>
-<p class="sub">Checked on 11/13/2026 against YouTube’s official help pages. This changes: always check the source before deciding.</p>
+<h2>Faceless <span class="amb">doesn't mean authorless</span></h2>
+<p class="sub">Checked on Nov 13, 2026 against YouTube’s official help pages. This changes: always check the source before deciding.</p>
 <div class="grid g3">
 <div class="card"><h3>To join the Partner Program, today</h3><p>1,000 subscribers and 4,000 public watch hours in the last 12 months, or 1,000 subscribers and 10 million Shorts views in 90 days. <a href="https://support.google.com/youtube/answer/72851" rel="noopener" target="_blank">Source</a></p></div>
-<div class="card"><h3>Starting 2/1/2027, for new channels</h3><p>1,000 subscribers and 8,000 hours in 365 days, or 20 million Shorts views in 90 days. Anyone already in the program is unaffected. Fan-funding features remain available at 500 subscribers. <a href="https://support.google.com/youtube/answer/12843009" rel="noopener" target="_blank">Source</a></p></div>
+<div class="card"><h3>Starting Feb 1, 2027, for new channels</h3><p>1,000 subscribers and 8,000 hours in 365 days, or 20 million Shorts views in 90 days. Anyone already in the program isn't affected. Fan features are still available with 500 subscribers and 3,000 hours in the last year, or 3 million Shorts views in 90 days. <a href="https://support.google.com/youtube/answer/12843009" rel="noopener" target="_blank">Source</a></p></div>
 <div class="card"><h3>What doesn't monetize</h3><p>Template-based and repetitive content: image slideshows or scrolling text without narration, generic AI content mass-produced without the creator’s perspective, reading text from a website or news story you didn’t create. <a href="https://support.google.com/youtube/answer/1311392" rel="noopener" target="_blank">Source</a></p></div>
 </div>
 <div class="radar"><b>That’s why the kit never suggests</b> slideshow, scrolling text, news reading, or a series of AI videos in the same format. Every suggested format has its own voice, test, or explanation.</div>
@@ -257,22 +260,22 @@
 <h2>From the radar to the <span class="amb">script</span></h2>
 <p class="sub">Three free INEMA kits that complement each other.</p>
 <div class="grid g3">
-<a class="card" href="https://inematds.github.io/youtube-bombando/guia/" rel="noopener" target="_blank"><h3>youtube-bombando</h3><p>The radar: every morning, what's trending in your topic, and why.</p></a>
+<a class="card" href="https://inematds.github.io/youtube-bombando/guia/en/" rel="noopener" target="_blank"><h3>youtube-bombando</h3><p>The radar: every morning, what's trending in your topic, and why.</p></a>
 <div class="card"><h3>canal-sem-rosto (this)</h3><p>Turns the radar into faceless topics, with the numbers and format.</p></div>
-<a class="card" href="https://inematds.github.io/curiosidade-viral/guia/" rel="noopener" target="_blank"><h3>curiosidade-viral</h3><p>Helps you write the hook that keeps people watching.</p></a>
+<a class="card" href="https://inematds.github.io/curiosidade-viral/guia/en/" rel="noopener" target="_blank"><h3>curiosidade-viral</h3><p>Helps you write the hook that keeps people watching.</p></a>
 </div>
 </div></section>
 <div class="techhead" id="tecnico"><div class="wrap">
 <span class="chip">Technical section</span>
 <h2>The kit: <span class="amb">for anyone who wants topics about their own subject</span></h2>
-<p class="sub">From here down is the technical part: downloading, running, and reading the topics. You <strong>not required</strong> from this part to understand what's above.</p>
+<p class="sub">From here down is the technical part: downloading, running, and reading the topics. You <strong>don't need</strong> this part to understand what's above.</p>
 </div></div>
 <div class="techzone">
 <section id="oque"><div class="wrap">
 <span class="chip">What it is</span>
 <h2>Two scripts <span class="amb">and a method</span></h2>
 <div class="grid g3">
-<div class="card"><h3>pautas.py</h3><p>Read the radar file (<code>dados.json</code>) and saves <code>saida/pautas.md</code> e <code>saida/pautas.json</code>: up to 10 topics, weak signals, and what’s outside the method.</p></div>
+<div class="card"><h3>pautas.py</h3><p>Read the radar file (<code>dados.json</code>) and saves <code>saida/pautas.md</code> and <code>saida/pautas.json</code>: up to 10 topics, weak signals (a topic that broke out on just one channel), and what falls outside the method.</p></div>
 <div class="card"><h3>checa_sem_fonte.py</h3><p>Check your script or output for another creator’s channel name, title, or video ID before publishing.</p></div>
 <div class="card"><h3>metodo/</h3><p>The 5 steps, one per file, and the YouTube rules checked against the source, with the date.</p></div>
 </div>
@@ -294,10 +297,10 @@
 <span class="chip">Prerequisites</span>
 <h2>What you need</h2>
 <div class="grid g3">
-<div class="card"><h3>Python 3.10 or newer</h3><p>Standard library only, nothing to install with pip. Check:</p><pre><span class="k">python3 --version</span></pre></div>
-<div class="card"><h3>git</h3><p>To download the kit:</p><pre><span class="k">git clone https://github.com/inematds/canal-sem-rosto</span>
+<div class="card"><h3>Python 3.10 or newer</h3><p>Standard library only, nothing to install with pip. Tested on Linux; on Windows, the command is usually <code>python</code> or <code>py</code> instead of <code>python3</code>. Check:</p><pre><span class="k">python3 --version</span></pre></div>
+<div class="card"><h3>git (or the ZIP)</h3><p>To download the kit. Without git, use "Code → Download ZIP" on the <a href="https://github.com/inematds/canal-sem-rosto" rel="noopener" target="_blank">GitHub page</a> and extract it next to the radar folder.</p><pre><span class="k">git clone https://github.com/inematds/canal-sem-rosto</span>
 <span class="k">cd canal-sem-rosto</span></pre></div>
-<div class="card"><h3>The youtube-bombando radar</h3><p>It’s what generates the <code>dados.json</code>. Install it with <a href="https://inematds.github.io/youtube-bombando/guia/" rel="noopener" target="_blank">its guide</a> and swap in topics for your niche.</p></div>
+<div class="card"><h3>The youtube-bombando radar</h3><p>It’s what generates the <code>dados.json</code>. Install it with <a href="https://inematds.github.io/youtube-bombando/guia/en/" rel="noopener" target="_blank">its guide</a> and swap in topics for your niche.</p></div>
 </div>
 </div></section>
 <section id="guia"><div class="wrap">
@@ -311,9 +314,9 @@
 </div></div>
 <div class="step"><div class="b">2</div><div>
 <h3>Run it on your radar</h3>
-<p>Without a path, the kit looks for the radar in <code>~/projetos/youtube-bombando/painel/dados.json</code>. If it’s somewhere else, provide the path:</p>
+<p>The radar saves the file in <code>painel/dados.json</code>, inside its folder, after the first collection. Without a path, the kit looks for the radar in the folder next to it (<code>../youtube-bombando</code>), in <code>~/projetos/youtube-bombando</code> and in <code>~/youtube-bombando</code>. If it’s somewhere else, provide the path:</p>
 <pre><span class="k">python3 pautas.py</span>
-<span class="k">python3 pautas.py /caminho/para/dados.json</span></pre>
+<span class="k">python3 pautas.py ../youtube-bombando/painel/dados.json</span></pre>
 </div></div>
 <div class="step"><div class="b">3</div><div>
 <h3>Adjust the filter if you want</h3>
@@ -327,9 +330,9 @@
 </div></div>
 <div class="step"><div class="b">5</div><div>
 <h3>Review the script before publishing</h3>
-<p>Check your text for any channel, title, or radar ID:</p>
-<pre><span class="k">python3 checa_sem_fonte.py /caminho/para/dados.json roteiro.txt</span>
-<span class="c"># "no third-party sources found" = you can proceed</span></pre>
+<p>Save your script in a text file (e.g., <code>roteiro.txt</code>). The checker searches it for any channel, title, or radar ID. If it finds one, it shows the file, line, and masked name (e.g., <code>roteiro.txt:3:U***I</code>) and exits with code 1: remove the name and run it again.</p>
+<pre><span class="k">python3 checa_sem_fonte.py ../youtube-bombando/painel/dados.json roteiro.txt</span>
+<span class="c"># "nenhuma fonte de terceiro encontrada" (no third-party source found; the kit prints in Portuguese) = you can proceed</span></pre>
 </div></div>
 <div class="step"><div class="b">6</div><div>
 <h3>Run the tests (optional)</h3>
@@ -338,9 +341,9 @@
 </div></section>
 <section id="exemplos"><div class="wrap">
 <span class="chip">Examples</span>
-<h2>What's next <span class="amb">in the repository</span></h2>
+<h2>What comes <span class="amb">in the repository</span></h2>
 <table class="n">
-<tr><th>Archive</th><th>What it is</th></tr>
+<tr><th>File</th><th>What it is</th></tr>
 <tr><td><code>exemplos/dados-sintetico.json</code></td><td>fictional radar, with made-up channels and titles, covering difficult cases (no channel size, no duration, humor, large channel)</td></tr>
 <tr><td><code>exemplos/pautas-exemplo.md</code></td><td>the kit’s output based on this made-up radar</td></tr>
 <tr><td><code>metodo/regras-youtube.md</code></td><td>the rules for the Partner Program and repetitive content, with official sources and the date they were checked</td></tr>
@@ -349,7 +352,7 @@
 <section id="roadmap"><div class="wrap">
 <span class="chip">Roadmap</span>
 <h2>Next steps</h2>
-<div class="phase"><div class="tag">Today</div><div class="d"><strong>Topics, fact-checking, and method</strong><span>17 editable topics, filters with minimum view and channel counts, 15 tests, YouTube rules checked on 11/13/2026.</span></div></div>
+<div class="phase"><div class="tag">Today</div><div class="d"><strong>Topics, fact-checking, and method</strong><span>17 editable topics, filters with minimum view and channel counts, 15 tests, YouTube rules checked on Nov 13, 2026.</span></div></div>
 <div class="phase"><div class="tag">Next</div><div class="d"><strong>Round history</strong><span>Compare the same topic across several radar runs to see if it remains strong.</span></div></div>
 <div class="phase"><div class="tag">After</div><div class="d"><strong>Your channel on the radar</strong><span>Automatic Step 5: mark your videos and show how each one performed against your usual results.</span></div></div>
 </div></section>

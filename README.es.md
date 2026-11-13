@@ -8,13 +8,13 @@
 
 ## Qué es
 
-Mucha gente quiere tener un canal sobre IA, pero no quiere aparecer. En nuestro radar de YouTube, lo que más impulsó las visualizaciones fue el tema, no quién aparece. El **canal sin rostro con radar** es un método de 5 etapas y un kit gratis: lee el radar de lo que está en auge, separa los temas con los que canales pequeños y medianos salieron de su burbuja y sugiere ideas con sus cifras y un formato sin rostro para cada una. Necesitas una computadora con Python y el radar [youtube-bombando](https://inematds.github.io/youtube-bombando/guia/) (también gratis). No hay promesa de dinero ni de visualizaciones: el radar muestra una oportunidad.
+Mucha gente quiere tener un canal sobre IA, pero no quiere aparecer. En nuestro radar de YouTube, lo que más impulsó las vistas fue el tema, no quién aparece. El **canal sin rostro con radar** es un método de 5 etapas y un kit gratis: lee el radar de lo que está en auge, separa los temas en los que canales pequeños y medianos rompieron la burbuja y sugiere ideas con los números y un formato sin rostro para cada una. Necesitas una computadora con Python y el radar [youtube-bombando](https://inematds.github.io/youtube-bombando/guia/) (también gratis). No hay promesa de dinero ni de vistas: el radar muestra una oportunidad.
 
 ## 📖 Guía de uso
 
 Guía completa (landing + paso a paso): **https://inematds.github.io/canal-sem-rosto/guia/es/**
 
-**Sin promesa de dinero ni de visualizaciones.** El radar señala una oportunidad. No demuestra que el tema haya causado el resultado ni garantiza que se repita.
+**Sin promesa de dinero ni de vistas.** El radar señala una oportunidad. No prueba que el tema haya causado el resultado ni garantiza que se repita.
 
 ## Instalación
 
@@ -36,32 +36,32 @@ python3 checa_sem_fonte.py exemplos/dados-sintetico.json saida/pautas.md saida/p
 python3 -m unittest discover -s tests
 ```
 
-El ejemplo es completamente inventado. Abre `saida/pautas.md` para leerlo; `saida/pautas.json` contiene los mismos datos estructurados. Las cifras en el JSON son numéricas; en el texto usan coma decimal y punto para los miles.
+El ejemplo es completamente inventado. Abre `saida/pautas.md` para leerlo; `saida/pautas.json` contiene los mismos datos estructurados. Los números del JSON son numéricos; en el texto usan coma decimal y punto de miles.
 
 Para usar tu radar:
 
 ```bash
 python3 pautas.py
-# Ou indique onde salvou o arquivo:
+# O indica dónde guardaste el archivo:
 python3 pautas.py /caminho/dados.json --saida saida --n 10 --piso-views 1000 --fator 3 --amostra 5
 ```
 
-La ruta predeterminada es `~/projetos/youtube-bombando/painel/dados.json`. Si no existe, el comando indica cómo proceder y termina con el código 2. Genera o descarga los datos siguiendo la [guía del radar](https://inematds.github.io/youtube-bombando/guia/). Mantén los datos reales fuera del repositorio.
+El radar guarda el archivo en `painel/dados.json`, dentro de su carpeta. Si no indicas una ruta, el kit busca en la carpeta contigua (`../youtube-bombando/painel/dados.json`), en `~/projetos/youtube-bombando/painel/dados.json` y en `~/youtube-bombando/painel/dados.json`. Si no lo encuentra, indica dónde buscó y termina con el código 2. Genera o descarga los datos siguiendo la [guía del radar](https://inematds.github.io/youtube-bombando/guia/). Mantén los datos reales fuera del repositorio.
 
 ## Cómo funciona el filtro
 
 - Categoría: Contenido o Contenido + quién habla.
-- Tamaño: pequeño o mediano. Los canales sin tamaño indicado y los canales grandes no se incluyen.
-- Factor del canal de al menos 3×, al menos 1.000 visualizaciones y una muestra de al menos 5 videos.
+- Tamaño: pequeño o mediano. Si falta el tamaño o el canal es grande, no se incluye.
+- Factor del canal de al menos 3×, al menos 1.000 vistas y una muestra de al menos 5 videos.
 - Tema: el mismo nicho y tema deben aparecer en al menos 2 canales distintos.
 
-El factor compara un video con la mediana de los videos recientes del propio canal. La mediana es el valor del medio de la lista ordenada. Así, un canal grande no gana solo por tener ya una audiencia.
+El factor compara un video con la mediana de los videos recientes del propio canal. La mediana es el valor central de la lista ordenada. Así, un canal grande no gana solo por tener ya una audiencia.
 
-El título solo sirve para encontrar un tema en `temas.json`. Edita las etiquetas y las palabras con cuidado: usa temas, nunca nombres de fuentes. La comparación ignora tildes y mayúsculas, y respeta las palabras completas. Si coinciden varios temas, se elige el primero; los temas con `evitar_sem_rosto` tienen prioridad y quedan fuera del método. Si no hay coincidencia, el tema es “general del nicho”. Un video en dos nichos cuenta en ambos; no sumes los temas como si fueran videos únicos.
+El título solo sirve para encontrar un tema en `temas.json`. Edita las etiquetas y las palabras con cuidado: usa temas, nunca nombres de fuentes. La comparación ignora tildes y mayúsculas y respeta las palabras completas. Si coinciden varios temas, gana el primero; los temas con `evitar_sem_rosto` tienen prioridad y quedan fuera del método. Si no hay coincidencias, el tema será «general del nicho». Un video en dos nichos cuenta en ambos; no sumes los temas como si fueran videos únicos.
 
-Orden: más canales, mayor factor mediano y más visualizaciones sumadas. Los empates se resuelven por orden alfabético del tema. El límite `--n` no se completa con señales débiles. Un solo canal queda en `sinais_fracos`; sin identidad de canal tampoco se forma un tema. El identificador del canal tiene prioridad; el nombre sirve como alternativa. Cuando hay un único ID conocido para ese nombre, los registros se agrupan. Cada registro de video de la entrada cuenta una vez en cada nicho: usa una exportación sin videos duplicados.
+Orden: más canales, mayor factor mediano y más vistas sumadas. En caso de empate, los temas se ordenan alfabéticamente. El límite `--n` no se completa con señales débiles. Un solo canal queda en `sinais_fracos`; sin identidad de canal tampoco se forma un tema. El identificador del canal tiene prioridad; el nombre sirve como alternativa. Cuando hay un único ID conocido para ese nombre, los registros se agrupan. Cada registro de video de la entrada cuenta una vez en cada nicho: usa una exportación sin videos duplicados.
 
-Duración: corto, menos de 8 minutos; medio, de 8 a 20; largo, más de 20 y hasta 60; maratón, más de 60. Si no hay duración, se muestra como “sin duración”. Los empates en el rango más común usan ese orden, con el rango desconocido al final. El peso del contenido usa el porcentaje proporcionado por el radar, sin recalcularlo ni inferir una causa.
+Duración: corto, menos de 8 minutos; mediano, de 8 a 20; largo, más de 20 hasta 60; maratón, más de 60. Si falta la duración, se muestra como «sin duración». En caso de empate en el rango más común, se usa este orden, con el rango desconocido al final. El peso del contenido usa el porcentaje proporcionado por el radar, sin recalcularlo ni inferir una causa.
 
 ## Las 5 etapas
 
@@ -76,7 +76,7 @@ Consulta el [método completo](metodo/README.md) y las [reglas de YouTube verifi
 ## El proceso, de principio a fin
 
 1. 🧠 **Tú:** elige un tema amplio y genera/descarga `dados.json` en la herramienta del [radar](https://inematds.github.io/youtube-bombando/guia/).
-2. ⚙️ **Script:** ejecuta `python3 pautas.py /caminho/dados.json`. Lee las cifras en `saida/pautas.md`.
+2. ⚙️ **Script:** ejecuta `python3 pautas.py /caminho/dados.json`. Lee los números en `saida/pautas.md`.
 3. 🧠 **Tú:** elige un tema con al menos dos canales. Escribe un problema, una promesa y una prueba propia en tu editor de texto. Sigue [el guion](metodo/2-roteiro-com-gancho.md).
 4. 🧠 **Tú:** graba la pantalla o dibuja un diagrama, haz la prueba y explícalo con tu narración o escritura. Usa tu grabador de pantalla y editor de video.
 5. ⚙️ **Script:** antes de compartir los textos, ejecuta `python3 checa_sem_fonte.py /caminho/dados.json saida/pautas.md saida/pautas.json /caminho/roteiro.txt`.
@@ -86,19 +86,19 @@ Consulta el [método completo](metodo/README.md) y las [reglas de YouTube verifi
 
 ## Las fuentes son privadas
 
-Los informes públicos no incluyen títulos, canales, personas, descripciones, IDs ni enlaces de videos. La terminal solo muestra un resumen y los filtros. El archivo de entrada permanece en tu computadora.
+Los informes públicos no incluyen títulos, canales, personas, descripciones, ID ni enlaces a videos. La terminal solo muestra un resumen y los filtros. El archivo de entrada permanece en tu computadora.
 
 ```bash
 python3 pautas.py /caminho/dados.json --detalhes
 ```
 
-Solo esta opción guarda títulos y canales en `saida/detalhes-PRIVADO.md`, con permisos de lectura/escritura solo para el propietario. **No publiques este archivo.** Sirve para tu estudio. Incluye los grupos que pasaron el filtro de video, incluso las señales débiles y los temas excluidos. Una ejecución posterior sin la opción no borra el archivo privado anterior; la terminal avisa si todavía existe.
+Solo esta opción guarda títulos y canales en `saida/detalhes-PRIVADO.md`, con permisos de lectura y escritura únicamente para el dueño. **No publiques este archivo.** Sirve para tu estudio. Incluye los grupos que pasaron el filtro de video, incluso las señales débiles y los temas excluidos. Una ejecución posterior sin la opción no borra el archivo privado anterior; la terminal avisa si aún existe.
 
-El verificador busca cadenas completas, sin distinguir mayúsculas, en `.md`, `.json`, `.html`, `.txt`, `.py`, `.yaml` y `.srt`. Las carpetas se recorren de forma recursiva; se ignoran `.git`, los enlaces simbólicos y los archivos llamados `detalhes-PRIVADO.md`. Se ignoran los términos de menos de 5 caracteres y las palabras comunes del diccionario/stopwords. No reconoce paráfrasis ni sustituye tu revisión. Código 0: limpio; 1: encontró una fuente, con el texto oculto; 2: error de lectura. Al revisar todo el repositorio, se señalará la propia entrada sintética: contiene fuentes inventadas a propósito. Revisa los archivos que pretendes publicar.
+El verificador busca cadenas completas, ignorando mayúsculas, en `.md`, `.json`, `.html`, `.txt`, `.py`, `.yaml` y `.srt`. Recorre las carpetas de forma recursiva; ignora `.git`, los enlaces simbólicos y los archivos llamados `detalhes-PRIVADO.md`. Ignora los términos de menos de 5 caracteres y las palabras comunes del diccionario/listas de palabras vacías. No reconoce paráfrasis ni sustituye tu revisión. Código 0: limpio; 1: encontró una fuente, con el texto oculto; 2: error de lectura. Al revisar todo el repositorio, se señalará la propia entrada sintética: contiene fuentes inventadas a propósito. Revisa los archivos que pretendes publicar.
 
 ## Ejemplo y mantenimiento
 
-[Consulta el informe sintético](exemplos/pautas-exemplo.md). Para regenerarlo:
+[Consulta el informe sintético](exemplos/pautas-exemplo.md). Para volver a generarlo:
 
 ```bash
 python3 pautas.py exemplos/dados-sintetico.json --saida saida/exemplo
