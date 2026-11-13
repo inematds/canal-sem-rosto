@@ -14,6 +14,8 @@ Mucha gente quiere tener un canal sobre IA, pero no quiere aparecer. En nuestro 
 
 Guía completa (landing + paso a paso): **https://inematds.github.io/canal-sem-rosto/guia/es/**
 
+🎬 Video (en portugués): https://www.youtube.com/watch?v=HqBKgxhUHak · Short: https://youtube.com/shorts/LQY5YGVvTHE
+
 **Sin promesa de dinero ni de vistas.** El radar señala una oportunidad. No prueba que el tema haya causado el resultado ni garantiza que se repita.
 
 ## Instalación

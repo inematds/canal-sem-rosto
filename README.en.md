@@ -14,6 +14,8 @@ Many people want to have a channel about AI but don’t want to appear on camera
 
 Complete guide (landing page + step-by-step instructions): **https://inematds.github.io/canal-sem-rosto/guia/en/**
 
+🎬 Video (in Portuguese): https://www.youtube.com/watch?v=HqBKgxhUHak · Short: https://youtube.com/shorts/LQY5YGVvTHE
+
 **No promise of money or views.** The radar points to an opportunity. It doesn’t prove that the topic caused the result, or guarantee that it will happen again.
 
 ## Installation
